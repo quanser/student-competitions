@@ -1,98 +1,240 @@
-/* ------------------------------------------
-   Base theme variables (Light Mode defaults)
-------------------------------------------- */
+/* Optional: Quanser-like font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* -------------------------------------------------
+   Base theme variables (LIGHT MODE defaults)
+-------------------------------------------------- */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
+  --page-bg: #f3f4f6;           /* overall page background */
+  --surface-bg: #ffffff;        /* main content card background */
 
-  --heading-color: #004aad;
+  --text-color: #111827;        /* main text */
+  --muted-color: #6b7280;       /* muted text */
 
-  --link-color: #0066cc;
-  --link-hover-color: #004aad;
+  --primary: #c8102e;           /* Quanser red */
+  --primary-dark: #9f0e25;      /* darker Quanser red */
 
-  --list-item-margin: 0.5em;
+  --border-color: #e5e7eb;      /* light border color */
 
-  --max-width: 800px;
+  --header-bg: #111827;         /* dark header bar */
+  --header-text: #ffffff;       /* header text color */
+  --header-shadow: rgba(15, 23, 42, 0.25);
+
+  --table-head-bg: #111827;     /* table header background */
+  --table-head-text: #ffffff;   /* table header text */
+
+  --toc-pill-bg: #f9fafb;       /* quick-links pill background */
 }
 
-/* ------------------------------------------
-   Dark Mode overrides (auto-detected)
-------------------------------------------- */
+/* -------------------------------------------------
+   Dark mode overrides (auto via OS/browser)
+-------------------------------------------------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #111111;
-    --text-color: #e5e5e5;
+    --page-bg: #020617;           /* slate-950-like */
+    --surface-bg: #0f172a;        /* slate-900-like */
 
-    --heading-color: #6aa9ff;
+    --text-color: #e5e7eb;        /* light text */
+    --muted-color: #9ca3af;       /* gray-400 */
 
-    --link-color: #8bbdff;
-    --link-hover-color: #cce0ff;
+    --primary: #f97373;           /* brighter red for dark mode */
+    --primary-dark: #fecaca;      /* lighter-on-hover accent */
+
+    --border-color: #1f2937;      /* slate-800 */
+
+    --header-bg: #020617;
+    --header-text: #f9fafb;
+    --header-shadow: rgba(0, 0, 0, 0.6);
+
+    --table-head-bg: #020617;
+    --table-head-text: #f9fafb;
+
+    --toc-pill-bg: #0b1120;
   }
 }
 
-/* ------------------------------------------
-   Base styling (using the variables)
-------------------------------------------- */
+/* -------------------------------------------------
+   Global layout / typography
+-------------------------------------------------- */
 
 body {
-  font-family: system-ui, sans-serif;
-  max-width: var(--max-width);
-  margin: 2em auto;
-  line-height: 1.5;
-
-  background: var(--bg-color);
+  font-family: "Montserrat", system-ui, sans-serif;
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+  line-height: 1.7;
   color: var(--text-color);
-
-  padding: 0 1rem; /* optional, improves small-screen edges */
+  background: var(--page-bg);
 }
 
-header,
-footer {
-  text-align: center;
+/* Header bar at top */
+.site-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 1.75rem 2rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  border-bottom: 4px solid var(--primary);
+  box-shadow: 0 14px 28px var(--header-shadow);
 }
 
-h1 {
-  color: var(--heading-color);
+.site-header h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
+/* Main content “card” */
+.content {
+  background: var(--surface-bg);
+  padding: 2rem 2.25rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+}
+
+/* Top-level page title inside main */
+.content > h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* Paragraphs */
+p {
+  margin: 0.6rem 0 0.6rem;
+}
+
+/* Section headings */
+h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.25rem;
+}
+
+/* -------------------------------------------------
+   Lists
+-------------------------------------------------- */
+
+/* Default list style for “normal” lists */
 ul {
-  list-style: none;
-  padding: 0;
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.3rem;
 }
 
 li {
-  margin: var(--list-item-margin) 0;
+  margin: 0.35rem 0;
 }
 
+/* Treat the first UL in main.content as a TOC / quick links bar */
+.content > ul:first-of-type {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.content > ul:first-of-type > li {
+  margin: 0;
+}
+
+.content > ul:first-of-type > li > a {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--toc-pill-bg);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* -------------------------------------------------
+   Links
+-------------------------------------------------- */
+
 a {
+  color: var(--primary);
   text-decoration: none;
-  color: var(--link-color);
+  font-weight: 500;
 }
 
 a:hover {
+  color: var(--primary-dark);
   text-decoration: underline;
-  color: var(--link-hover-color);
 }
 
-/* ============================
-   Table Styling
-   ============================ */
+/* -------------------------------------------------
+   Tables (used in your timeline)
+-------------------------------------------------- */
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
+  margin: 1.2rem 0 1.5rem;
+  font-size: 0.95rem;
 }
 
 th,
 td {
-  border: 1px solid #ddd;
-  padding: 0.5rem 0.75rem;
-  vertical-align: top;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border-color);
 }
 
-th {
-  background-color: #f5f5f5;
+thead th {
+  background: var(--table-head-bg);
+  color: var(--table-head-text);
   font-weight: 600;
   text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(249, 250, 251, 0.9); /* light stripe in light mode */
+}
+
+/* Let dark mode stripe still be subtle */
+@media (prefers-color-scheme: dark) {
+  tbody tr:nth-child(even) {
+    background: rgba(15, 23, 42, 0.7); /* dark blue-gray stripe */
+  }
+}
+
+/* Respect your inline center styles for first column */
+td[style*="text-align: center;"],
+th[style*="text-align: center;"] {
+  text-align: center !important;
+}
+
+/* -------------------------------------------------
+   Footer
+-------------------------------------------------- */
+
+.site-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: var(--primary);
+}
+
+.site-footer a:hover {
+  color: var(--primary-dark);
 }
 
