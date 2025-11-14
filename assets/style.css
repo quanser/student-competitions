@@ -74,3 +74,25 @@ a:hover {
   color: var(--link-hover-color);
 }
 
+/* ============================
+   Table Styling
+   ============================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  text-align: left;
+}
+
