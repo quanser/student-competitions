@@ -1,3 +1,3 @@
-# Quanser Studen Competitions
+# Quanser Student Competitions
 
-Public repo to host resources for various Quanser Student Competitions.
+This repository hosts the public site and downloadable materials for Quanser student competitions.

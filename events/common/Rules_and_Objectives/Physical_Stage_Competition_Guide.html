@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Physical Stage Competition Guide 🪧 <!-- omit in toc --></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Will become e.g. "assets/style.css" or "../assets/style.css" -->
+  <link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Quanser Student Competitions</h1>
+  </header>
+
+  <main class="content">
+    <h1 id="physical-stage-competition-guide">Physical Stage Competition Guide 🪧 <!-- omit in toc --></h1>
+<p>Welcome to the physical stage of the competition. Teams will implement their self-driving algorithm on the physical QCar and compete live!</p>
+<ul>
+<li><a href="#physical-stage-detailed-objective">Physical Stage Detailed Objective</a></li>
+<li><a href="#ride-ratings">Ride Ratings</a></li>
+<li><a href="#scoring-system">Scoring System</a></li>
+<li><a href="#coordinate-system">Coordinate System</a></li>
+</ul>
+<h2 id="physical-stage-detailed-objective">Physical Stage Detailed Objective</h2>
+<p>The objective of the competition will be to maximize the amount of money earned by completing taxi rides within a certain amount of time. All teams will be given a file that contains coordinates and ride details on the day of the competition. Rides can have multiple stops, which will add complexity. Teams will earn more money for more complex rides.</p>
+<p>The first coordinate in a ride will always be the Pickup location. Teams must indicate a pickup by changing the QCar 2 LED strip to <span style="color: blue;"> Blue </span> and come to a full stop at the pick up.</p>
+<p>The last coordinate in a ride will always be the Drop Off location. Teams must indicate a drop off by changing the QCar 2 LED strip to <span style="color: orange;"> Orange </span> and come to a full stop at the drop off location.</p>
+<p>Any coordinates in a ride that aren’t the first and last coordinates will be a Stop. Teams must indicate a stop by changing the QCar 2 LED strip to <span style="color: red;"> Red </span> and come to a full stop at the stop location.</p>
+<p>When driving between coordinates, teams must change their LED strip to <span style="color: green;"> Green </span>.</p>
+<p>The sequence of a single ride will consist of the following:</p>
+<ol>
+<li>
+<p>The QCar 2 will start in the Taxi Hub Area with <span style="color: red;"> Red </span> LEDs for 3 seconds.</p>
+</li>
+<li>
+<p>Teams will need to write down (or call out) the ride number they are attempting and show the judges.</p>
+</li>
+<li>
+<p>Once a team receives confirmation from the judges, they can begin the ride.</p>
+</li>
+<li>
+<p>Teams will need to navigate to the pickup location.</p>
+</li>
+<li>
+<p>Once the QCar 2 has arrived at the pickup location, it must change the onboard LED strip to <span style="color: blue;"> Blue </span> and come to a full stop.</p>
+</li>
+<li>
+<p>If there are any stops in the ride, teams will need to navigate to the stop location, change the LED strip to <span style="color: red;"> Red</span>, and come to a full stop.</p>
+</li>
+<li>
+<p>For the final coordinate, teams will need to navigate to the drop off location, change the LED strip to <span style="color: orange;"> orange</span>, and come to a full stop.</p>
+</li>
+<li>
+<p>Once the drop off has been completed, teams will need to navigate back to the Taxi Hub Area and change their LEDs to <span style="color: red;"> Red </span> to signal the end of the ride.</p>
+</li>
+</ol>
+<p>Once all the above steps have been completed, the judges will mark down the successful completion of a ride. The team will receive a preset dollar amount for the completion of the ride. The team will also receive a rating for the ride based on whether they followed traffic laws correctly. Infractions will lower the rating the team receives. Please refer to the Ratings section for details.</p>
+<p>If the team feels they want to restart the ride or they think they have received too many infractions, they can pick up their QCar 2 and place it back in the Taxi Hub Area. Any time a team touches their QCar 2, it will disqualify that ride, and they must place it back in the Taxi Hub Area.</p>
+<p>A ride may be completed multiple times, but only the best rating for that ride will contribute to the final score.</p>
+<h2 id="ride-ratings">Ride Ratings</h2>
+<p>Ratings will be given after every ride completion. The ride rating will be out of 5 stars. All rides will start with a 5-star rating and stars will be deducted based on the following table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Infraction</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Star Deduction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Minor Lane Departure</td>
+<td style="text-align: left;">Drives over line/sidewalk for less than 3 seconds and by less than approximately 1 car width</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Major Lane Departure</td>
+<td style="text-align: left;">Drives over line/sidewalk for 3-6 seconds and by less than approximately 1 car width</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Disqualifying Lane Departure</td>
+<td style="text-align: left;">Drives over line/sidewalk for more than 6 seconds or by more than 1 car width</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Does not full stop at a stop sign</td>
+<td style="text-align: left;">Wheels do not come to a full stop at the stop sign</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Does not stop at a stop sign</td>
+<td style="text-align: left;">Does not slow down or minimally slows down for the stop sign</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stops over the white line for a stop sign</td>
+<td style="text-align: left;">Front wheels are on or in front of the white line</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stops over the white line or in a cross walk for the traffic lights</td>
+<td style="text-align: left;">Front wheels are on or in front of the white line or the front wheels are in the crosswalk</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Does not stop at a traffic light</td>
+<td style="text-align: left;">Goes through a red light</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cone Collision</td>
+<td style="text-align: left;">Collides with a cone</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Obstacle Collision</td>
+<td style="text-align: left;">Collides with an object that is not a cone</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Failure to yield</td>
+<td style="text-align: left;">Fails to yield at a yield sign when the car doesn’t have the right of way</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Incorrect QCar 2 LED Strip colour (per infraction)</td>
+<td style="text-align: left;">Fails to change QCar 2 LED strip to the correct colours laid out in the Stage 3 Objective section</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Failure to stop in the correct area for a pick-up, stop, or drop-off</td>
+<td style="text-align: left;">A mark zone will show where the stopping locations are for a pick-up, stop, and drop-off. Failure to stop within that zone is a penalty</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disclaimer</strong>: This list contains the most likely infractions, but this list could be added to. The judges will notify teams if there is an addition to the list during the competition.</p>
+<p>For timings, approximate distances and speeds, judges will be using their discretion. All decisions made by the judges in the moment will be final unless overruled by another judge. Please respect their decisions.</p>
+<h2 id="scoring-system">Scoring System</h2>
+<p>The scoring will consist of 2 parts, the value of the ride and the rating received for the ride. Each ride will have a dollar value associated with it depending on the complexity. This dollar value will be multiplied by the number of stars received in the rating for the ride.</p>
+<p><strong>Formula</strong>:</p>
+<pre><code class="language-math">Ride Value * Rating = Total Money Earned
+</code></pre>
+<p>Here is an example of the scoring for a few completed rides:</p>
+<p><center></center></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Ride#</th>
+<th style="text-align: center;">Ride Value</th>
+<th style="text-align: center;">Rating (Stars)</th>
+<th style="text-align: center;">Total Money Earned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">$9</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">$2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">$10</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">$3</td>
+<td style="text-align: center;">4.5</td>
+<td style="text-align: center;">$13.50</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">$5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">$0</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>The judges will be keeping track of the completed rides and the rating received for that ride.</p>
+<h2 id="coordinate-system">Coordinate System</h2>
+<p>Throughout the competition the following coordinate system will be used. The same coordinate system will be used for both the virtual and physical portions of the competition since QLabs contains 1:1 representations of the Quanser Roadmaps.</p>
+<p>[0,0,0] and the orientation of the coordinate tool in QLabs will define the base frame that all coordinates are determined from.</p>
+<p><img alt="OriginOfTheBaseCoordinateFrame" src="https://github.com/quanser/Quanser_Student_Competitions/blob/main/Pictures/OriginOfTheMap.png"/></p>
+<p>Figure 2: Base Frame of the Coordinate System in the Competition Roadmap</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Quanser Student Competitions</p>
+  </footer>
+</body>
+</html>
+
