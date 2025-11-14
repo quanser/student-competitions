@@ -157,6 +157,29 @@ li {
 }
 
 /* -------------------------------------------------
+   Images inside content
+-------------------------------------------------- */
+
+.content img {
+  max-width: 100%;   /* never wider than the content column */
+  height: auto;      /* keep aspect ratio */
+  display: block;    /* avoids weird inline spacing */
+  margin: 1.5rem auto;  /* space above/below, centered */
+}
+
+/* Optional: if you want small captions under images later */
+.content figure {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.content figcaption {
+  font-size: 0.85rem;
+  color: var(--muted-color);
+  margin-top: 0.35rem;
+}
+
+/* -------------------------------------------------
    Links
 -------------------------------------------------- */
 
