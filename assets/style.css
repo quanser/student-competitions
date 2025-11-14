@@ -1,28 +1,76 @@
+/* ------------------------------------------
+   Base theme variables (Light Mode defaults)
+------------------------------------------- */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+
+  --heading-color: #004aad;
+
+  --link-color: #0066cc;
+  --link-hover-color: #004aad;
+
+  --list-item-margin: 0.5em;
+
+  --max-width: 800px;
+}
+
+/* ------------------------------------------
+   Dark Mode overrides (auto-detected)
+------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #111111;
+    --text-color: #e5e5e5;
+
+    --heading-color: #6aa9ff;
+
+    --link-color: #8bbdff;
+    --link-hover-color: #cce0ff;
+  }
+}
+
+/* ------------------------------------------
+   Base styling (using the variables)
+------------------------------------------- */
+
 body {
   font-family: system-ui, sans-serif;
-  max-width: 800px;
+  max-width: var(--max-width);
   margin: 2em auto;
   line-height: 1.5;
-  color: #333;
+
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  padding: 0 1rem; /* optional, improves small-screen edges */
 }
-header, footer {
+
+header,
+footer {
   text-align: center;
 }
+
 h1 {
-  color: #004aad;
+  color: var(--heading-color);
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
+
 li {
-  margin: 0.5em 0;
+  margin: var(--list-item-margin) 0;
 }
+
 a {
   text-decoration: none;
-  color: #0066cc;
+  color: var(--link-color);
 }
+
 a:hover {
   text-decoration: underline;
+  color: var(--link-hover-color);
 }
 
