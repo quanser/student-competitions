@@ -2,262 +2,172 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 /* -------------------------------------------------
-   Base theme variables (LIGHT MODE defaults)
+Base theme variables (LIGHT MODE defaults)
 -------------------------------------------------- */
 :root {
-  --page-bg: #f3f4f6;           /* overall page background */
-  --surface-bg: #ffffff;        /* main content card background */
+    --page-bg: #f3f4f6;           /* overall page background */
+    --surface-bg: #ffffff;        /* main content card background */
 
-  --text-color: #111827;        /* main text */
-  --muted-color: #6b7280;       /* muted text */
+    --text-color: #111827;        /* main text */
+    --muted-color: #6b7280;       /* muted text */
 
-  --primary: #c8102e;           /* Quanser red */
-  --primary-dark: #9f0e25;      /* darker Quanser red */
+    --primary: #c8102e;           /* Quanser red */
+    --primary-dark: #9f0e25;      /* darker Quanser red */
 
-  --border-color: #e5e7eb;      /* light border color */
+    --border-color: #e5e7eb;      /* light border color */
 
-  --header-bg: #111827;         /* dark header bar */
-  --header-text: #ffffff;       /* header text color */
-  --header-shadow: rgba(15, 23, 42, 0.25);
+    --header-bg: #111827;         /* dark header bar */
+    --header-text: #ffffff;       /* header text color */
+    --header-shadow: rgba(15, 23, 42, 0.25);
 
-  --table-head-bg: #111827;     /* table header background */
-  --table-head-text: #ffffff;   /* table header text */
+    --table-head-bg: #111827;     /* table header background */
+    --table-head-text: #ffffff;   /* table header text */
 
-  --toc-pill-bg: #f9fafb;       /* quick-links pill background */
+    --toc-pill-bg: #f9fafb;       /* quick-links pill background */
 }
 
 /* -------------------------------------------------
-   Dark mode overrides (auto via OS/browser)
+Dark mode overrides (auto via OS/browser)
 -------------------------------------------------- */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --page-bg: #020617;           /* slate-950-like */
-    --surface-bg: #0f172a;        /* slate-900-like */
+    :root {
+        --page-bg: #020617;           /* slate-950-like */
+        --surface-bg: #0f172a;        /* slate-900-like */
 
-    --text-color: #e5e7eb;        /* light text */
-    --muted-color: #9ca3af;       /* gray-400 */
+        --text-color: #e5e7eb;        /* light text */
+        --muted-color: #9ca3af;       /* gray-400 */
 
-    --primary: #f97373;           /* brighter red for dark mode */
-    --primary-dark: #fecaca;      /* lighter-on-hover accent */
+        --primary: #f97373;           /* brighter red for dark mode */
+        --primary-dark: #fecaca;      /* lighter-on-hover accent */
 
-    --border-color: #1f2937;      /* slate-800 */
+        --border-color: #1f2937;      /* slate-800 */
 
-    --header-bg: #020617;
-    --header-text: #f9fafb;
-    --header-shadow: rgba(0, 0, 0, 0.6);
+        --header-bg: #020617;
+        --header-text: #f9fafb;
+        --header-shadow: rgba(0, 0, 0, 0.6);
 
-    --table-head-bg: #020617;
-    --table-head-text: #f9fafb;
+        --table-head-bg: #020617;
+        --table-head-text: #f9fafb;
 
-    --toc-pill-bg: #0b1120;
-  }
+        --toc-pill-bg: #0b1120;
+    }
 }
 
 /* -------------------------------------------------
-   Global layout / typography
+Global layout / typography
 -------------------------------------------------- */
 
 body {
-  font-family: "Montserrat", system-ui, sans-serif;
-  max-width: 1100px;
-  margin: 2.5rem auto;
-  padding: 0 1.5rem;
-  line-height: 1.7;
-  color: var(--text-color);
-  background: var(--page-bg);
+    font-family: "Montserrat", system-ui, sans-serif;
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    background: var(--page-bg);
 }
 
 /* Header bar at top */
 .site-header {
-  background: var(--header-bg);
-  color: var(--header-text);
-  padding: 1.75rem 2rem;
-  border-radius: 0.75rem 0.75rem 0 0;
-  border-bottom: 4px solid var(--primary);
-  box-shadow: 0 14px 28px var(--header-shadow);
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.5rem 2rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    border-bottom: 4px solid var(--primary);
+    box-shadow: 0 14px 28px var(--header-shadow);
 }
 
+/* Three-column header layout: left (event), middle (title), right (Quanser) */
+.site-header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Columns */
+.header-left,
+.header-middle,
+.header-right {
+    flex: 1;               /* three equal-width zones */
+    display: flex;
+    align-items: center;
+}
+
+/* Left: event logo (aligned left) */
+.header-left {
+    justify-content: flex-start;
+}
+
+/* Middle: centered title */
+.header-middle {
+    justify-content: center;
+    text-align: center;
+}
+
+/* Right: Quanser logo (aligned right) */
+.header-right {
+    justify-content: flex-end;
+}
+
+/* Quanser logo (right) */
+.site-logo {
+    max-height: 48px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+}
+
+/* Event logo (left) – fill up to 90% of column width */
+.event-logo {
+    max-width: 90%;
+    height: auto;
+    max-height: 128px;       /* header max */
+    object-fit: contain;
+    display: block;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+/* Header title */
 .site-header h1 {
-  margin: 0;
-  font-size: 2.3rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+    margin: 0;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
 }
 
-/* Main content “card” */
-.content {
-  background: var(--surface-bg);
-  padding: 2rem 2.25rem;
-  border-radius: 0 0 0.75rem 0.75rem;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
-}
+/* Small-screen tweak */
+@media (max-width: 640px) {
+    .site-header {
+        padding: 1.25rem 1.5rem;
+    }
 
-/* Top-level page title inside main */
-.content > h1 {
-  margin-top: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-color);
-}
+    .site-logo {
+        max-height: 48px;
+    }
 
-/* Paragraphs */
-p {
-  margin: 0.6rem 0 0.6rem;
-}
+    .event-logo {
+        width: 80%;
+        max-height: 60px;
+    }
 
-/* Section headings */
-h2 {
-  margin-top: 2.2rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--primary);
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 0.25rem;
+    .site-header h1 {
+        font-size: 1.6rem;
+    }
 }
 
 /* -------------------------------------------------
-   Lists
+   Responsive images inside main content
+   (GitHub-like behavior)
 -------------------------------------------------- */
-
-/* Default list style for “normal” lists */
-ul {
-  margin: 0.5rem 0 1rem;
-  padding-left: 1.3rem;
-}
-
-li {
-  margin: 0.35rem 0;
-}
-
-/* Treat the first UL in main.content as a TOC / quick links bar */
-.content > ul:first-of-type {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 1.2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.content > ul:first-of-type > li {
-  margin: 0;
-}
-
-.content > ul:first-of-type > li > a {
-  display: inline-block;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-color);
-  background: var(--toc-pill-bg);
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-/* -------------------------------------------------
-   Images inside content
--------------------------------------------------- */
-
 .content img {
-  max-width: 100%;   /* never wider than the content column */
-  height: auto;      /* keep aspect ratio */
-  display: block;    /* avoids weird inline spacing */
-  margin: 1.5rem auto;  /* space above/below, centered */
-}
-
-/* Optional: if you want small captions under images later */
-.content figure {
-  margin: 1.5rem auto;
-  text-align: center;
-}
-
-.content figcaption {
-  font-size: 0.85rem;
-  color: var(--muted-color);
-  margin-top: 0.35rem;
-}
-
-/* -------------------------------------------------
-   Links
--------------------------------------------------- */
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-a:hover {
-  color: var(--primary-dark);
-  text-decoration: underline;
-}
-
-/* -------------------------------------------------
-   Tables (used in your timeline)
--------------------------------------------------- */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.2rem 0 1.5rem;
-  font-size: 0.95rem;
-}
-
-th,
-td {
-  padding: 0.6rem 0.75rem;
-  border: 1px solid var(--border-color);
-}
-
-thead th {
-  background: var(--table-head-bg);
-  color: var(--table-head-text);
-  font-weight: 600;
-  text-align: left;
-}
-
-tbody tr:nth-child(even) {
-  background: rgba(249, 250, 251, 0.9); /* light stripe in light mode */
-}
-
-/* Let dark mode stripe still be subtle */
-@media (prefers-color-scheme: dark) {
-  tbody tr:nth-child(even) {
-    background: rgba(15, 23, 42, 0.7); /* dark blue-gray stripe */
-  }
-}
-
-/* Respect your inline center styles for first column */
-td[style*="text-align: center;"],
-th[style*="text-align: center;"] {
-  text-align: center !important;
-}
-
-/* -------------------------------------------------
-   Footer
--------------------------------------------------- */
-
-.site-footer {
-  text-align: center;
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  font-size: 0.85rem;
-  color: var(--muted-color);
-  border-top: 1px solid var(--border-color);
-}
-
-.site-footer p {
-  margin: 0;
-}
-
-.site-footer a {
-  color: var(--primary);
-}
-
-.site-footer a:hover {
-  color: var(--primary-dark);
+    max-width: 100%;      /* never wider than the content column */
+    height: auto;         /* keep aspect ratio */
+    display: block;       /* remove inline gap under images */
+    margin: 1.5rem auto;  /* nice vertical spacing */
+    max-height: 80vh;     /* avoid extremely tall images dominating */
+    object-fit: contain;
 }
 
