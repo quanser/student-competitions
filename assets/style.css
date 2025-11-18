@@ -84,6 +84,20 @@ body {
     justify-content: space-between;
 }
 
+.header-banner {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.header-banner-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    object-fit: cover;
+}
+
 /* Columns */
 .header-left,
 .header-middle,
