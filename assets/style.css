@@ -71,7 +71,7 @@ body {
 .site-header {
     background: var(--header-bg);
     color: var(--header-text);
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 0rem;
     border-radius: 0.75rem 0.75rem 0 0;
     border-bottom: 4px solid var(--primary);
     box-shadow: 0 14px 28px var(--header-shadow);
