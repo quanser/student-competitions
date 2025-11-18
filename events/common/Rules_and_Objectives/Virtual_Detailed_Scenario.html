@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Detailed Scenario</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../../../assets/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="header-left">
+                    
+                </div>
+
+                <div class="header-middle">
+                    <h1>Quanser Student Competitions</h1>
+                </div>
+
+                <div class="header-right">
+                    <img src="../../../assets/logos/full colour_dark background_tagline.png" alt="Quanser Student Competitions logo" class="site-logo">
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <h1 id="detailed-scenario">Detailed Scenario <!-- omit in toc --></h1>
+<p>The detailed scenario is represented in <a href="https://youtu.be/NtgBwlfGbMc">this video</a>.</p>
+<p>Below is a step-by-step sequence of events that are representative of what will be tested during Stages 2 and 3 of the competition. It is still expected that teams communicate important aspects of their algorithm throughout their video submission.</p>
+<h2 id="scenario">Scenario</h2>
+<ol>
+<li>Run the <a href="XXXXXXXX">Setup_Real_Scenario.py</a> file. This will spawn the QCar 2 in the Taxi Hub Area:</li>
+</ol>
+<p><img alt="Taxi Hub Area" src="../Pictures/TaxiHubArea.png"/></p>
+<ol>
+<li>
+<p>Change the LED strip on the QCar to <span style="color: red;"> Red </span>.</p>
+</li>
+<li>
+<p>Change the LEDs to <span style="color: green;"> Green </span> and navigate to the pick-up coordinate [0.125, 4.395] (meters):</p>
+</li>
+</ol>
+<p><img alt="Pick-Up coordinate" src="../Pictures/PickUpCoordinate.png"/></p>
+<ol>
+<li>
+<p>Come to a full stop and change the LED strip to <span style="color: blue;"> Blue </span> to indicate a passenger pick up.</p>
+</li>
+<li>
+<p>Navigate to the drop-off coordinate [-0.905, 0.800] (meters):</p>
+</li>
+</ol>
+<p><img alt="Drop Off Coordinate" src="../Pictures/DropOffCoordinate.png"/></p>
+<ol>
+<li>
+<p>Come to a full stop and change the LED strip to <span style="color: orange;"> orange</span> to indicate a passenger drop off.</p>
+</li>
+<li>
+<p>Navigate back to the Taxi Hub Area and change the LED strip to <span style="color: red;"> Red </span> to await another ride.</p>
+</li>
+</ol>
+<p><strong>END OF SCENARIO</strong></p>
+<h2 id="coordinate-system">Coordinate System</h2>
+<p>Throughout the competition the following coordinate system will be used. The same coordinate system will be used for both the virtual and physical portions of the competition since QLabs contains 1:1 representations of the Quanser Roadmaps.</p>
+<p>[0,0,0] and the orientation of the coordinate tool in QLabs will define the base frame that all coordinates are determined from.</p>
+<p><img alt="OriginOfTheBaseCoordinateFrame" src="../Pictures/OriginOfTheMap.png"/></p>
+<p>Figure 2: Base Frame of the Coordinate System in the Competition Roadmap.</p>
+<h2 id="expectatations">Expectatations</h2>
+<p>When the judges are viewing the video submissions, they will be watching for the following, but not limited to:</p>
+<ol>
+<li>
+<p>Cars crossing over lane lines.</p>
+</li>
+<li>
+<p>Cars not fully stopping at traffic controls.</p>
+</li>
+<li>
+<p>Timely reactions to traffic controls.</p>
+</li>
+<li>
+<p>Properly stopping to pick-up and drop-off passengers.</p>
+</li>
+<li>
+<p>Avoiding any obstacles.</p>
+</li>
+<li>
+<p>Moving as fast as possible (moving as fast as possible will be important for the physical stage if applicable).</p>
+</li>
+<li>
+<p>Changing to the correct LED colours.</p>
+</li>
+</ol>
+<p>It is important to keep in mind that this scenario only represents a single "ride". The physical stage will require you to complete as many rides as possible in a certain time period.</p>
+<p>Teams are also expected to not use the <code>qvl</code> library to move or gather information from the QCar 2. Doing so will <strong>invalidate</strong> a submission.</p>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Quanser. All Rights Reserved. </p>
+        </footer>
+    </body>
+</html>
+

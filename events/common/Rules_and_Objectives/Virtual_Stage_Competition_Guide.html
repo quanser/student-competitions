@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Virtual Stage Competition Guide 🪧</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../../../assets/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="header-left">
+                    
+                </div>
+
+                <div class="header-middle">
+                    <h1>Quanser Student Competitions</h1>
+                </div>
+
+                <div class="header-right">
+                    <img src="../../../assets/logos/full colour_dark background_tagline.png" alt="Quanser Student Competitions logo" class="site-logo">
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <h1 id="virtual-stage-competition-guide">Virtual Stage Competition Guide 🪧 <!-- omit in toc --></h1>
+<p>Welcome to Stage 1 of the competition! Follow the below document for:</p>
+<ul>
+<li><a href="#virtual-stage-objective">Virtual Stage Objective</a></li>
+<li><a href="#virtual-stage-submission-requirements">Virtual Stage Submission Requirements</a></li>
+<li><a href="#core-principles-of-self-driving">Core-Principles of Self-Driving</a></li>
+<li><a href="#coordinate-system">Coordinate System</a></li>
+</ul>
+<h2 id="virtual-stage-objective">Virtual Stage Objective</h2>
+<p>The objective of Stage 1 is to create a video that highlights the performance and high-level details of your team's Self-Driving Car Algorithm. The video submission will be created using Quanser Interactive Labs (QLabs), which will be made available to all teams that register for the competition.</p>
+<p>Teams will be provided with a detailed scenario to test their Self-Driving algorithms. This detailed scenario will serve as a good indicator whether a team's algorithm is ready, and it is encouraged that teams make the scenario more complex to fully showcase all aspects of their algorithm. The scenario can be made more complex by spawning in different actors within QLabs to create different traffic scenarios.</p>
+<p>Teams will be ranked using the following criteria:</p>
+<ol>
+<li>
+<p>Readiness of a Self-Driving algorithm based on the core principles as stated in the Core Principles of Self-Driving section.</p>
+</li>
+<li>
+<p>Accuracy of driving (staying within the lanes).</p>
+</li>
+<li>
+<p>Timely reaction to road signage and traffic controls while adhering to traffic laws as stated in the Traffic Controls Rules section.</p>
+</li>
+<li>
+<p>Clear and concise communication of Self-Driving concepts demonstrated in the video.</p>
+</li>
+</ol>
+<p>a. This is one of the most important criteria because it will show the judges how well a team understands the principles of self-driving.</p>
+<h2 id="virtual-stage-submission-requirements">Virtual Stage Submission Requirements</h2>
+<ol>
+<li>
+<p>Controlling the QCar 2 or gathering data via the qvl library functions will invalidate any submission.</p>
+</li>
+<li>
+<p>Maximum 3-minute video demonstration of the Self-Driving capabilities and explanations.</p>
+</li>
+<li>
+<p>The submission must provide the following:</p>
+<p>a. Software: GitHub link to the repository with your team’s submission. The code may be reviewed.</p>
+<p>b. Video:  YouTube link demonstrating your code.</p>
+</li>
+</ol>
+<h2 id="core-principles-of-self-driving">Core-Principles of Self-Driving</h2>
+<p><strong>Data Collection:</strong></p>
+<p>A Self-Driving algorithm must be able to collect and filter information from interoceptive and exteroceptive sensors. Demonstrating the conversion of raw data to meaningful information is critical for Self-Driving cars to make higher-level decisions during an autonomous task.</p>
+<p><strong>Interpretation:</strong></p>
+<p>Using system-relevant data, a Self-Driving car must correlate the gathered information to factors happening internally or externally in the environment. Examples of external factors include the identification of traffic signs, traffic lights, pedestrians, and other cars. Examples of internal data include battery monitoring and system state identification.</p>
+<p><strong>Control Systems:</strong></p>
+<p>From the set of viable options determined in the interpretation of the world, the car must be able to execute accurately on the chosen option. This includes staying within lanes, executing turns, stopping at traffic controls, altering a path based on an obstacle, and maintaining a desired speed.</p>
+<p><strong>Localization and Path Planning:</strong></p>
+<p>For a car to arrive at pick-up and drop-off locations, it must understand where it is within the roadmap. This may involve storing a global or local map of the environment in memory. A successful driving algorithm should be able to determine where it is in space and how to get to another location on the competition roadmap. It must also be able to adjust the selected route based on information obtained on its trip such as vehicles on the road, road obstructions, and pedestrians entering/leaving the roadway.</p>
+<h2 id="coordinate-system">Coordinate System</h2>
+<p>Throughout the competition the following coordinate system will be used. The same coordinate system will be used for both the virtual and physical portions of the competition since QLabs contains 1:1 representations of the Quanser Roadmaps.</p>
+<p>[0,0,0] and the orientation of the coordinate tool in QLabs will define the base frame that all coordinates are determined from.</p>
+<p><img alt="OriginOfTheBaseCoordinateFrame" src="../Pictures/OriginOfTheMap.png"/></p>
+<p>Figure 2: Base Frame of the Coordinate System in the Competition Roadmap</p>
+<p>Also note that the CityScape maps within QLabs are full scale versions of the Physical Quanser Roapmaps.</p>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Quanser. All Rights Reserved. </p>
+        </footer>
+    </body>
+</html>
+
