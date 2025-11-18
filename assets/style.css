@@ -173,6 +173,14 @@ body {
 }
 
 /* -------------------------------------------------
+   TEMPORARILY DISABLE THREE-COLUMN HEADER CONTENT
+   (keep markup in base.html for future use)
+-------------------------------------------------- */
+.site-header .header-inner {
+    display: none;
+}
+
+/* -------------------------------------------------
    Responsive images inside main content
    (GitHub-like behavior)
 -------------------------------------------------- */
