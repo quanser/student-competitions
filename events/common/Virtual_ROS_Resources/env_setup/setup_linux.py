@@ -26,18 +26,16 @@ def main():
         ##############################################################
 
         # Clone Student Competitions repo to get docker container resources and custom Isaac ROS common files 
-        cloneStudentCompetitionsRepo = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone -b main https://github.com/quanser/ACC-Competition-2025.git", shell=True)
+        cloneStudentCompetitionsRepo = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone -b main https://github.com/quanser/student-competitions.git", shell=True)
         if cloneStudentCompetitionsRepo!=0:
             subprocess.call("sudo apt-get install git", shell = True)
-            cloneStudentCompetitionsRepo = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone https://github.com/quanser/ACC-Competition-2025.git", shell=True)
+            cloneStudentCompetitionsRepo = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone https://github.com/quanser/student-competitions.git", shell=True)
 
         # Clone Quanser Academic Resources repo to get qcar 2 specific resources
         cloneAcademicResources = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone -b main https://github.com/quanser/Quanser_Academic_Resources.git", shell=True)
         if cloneAcademicResources!=0:
             subprocess.call("sudo apt-get install git", shell = True)
             cloneStudentCompetitionsRepo = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone -b main https://github.com/quanser/Quanser_Academic_Resources.git", shell=True)
-
-
 
 
 
@@ -110,6 +108,12 @@ def main():
         copyPythonDevToROSDocker =  subprocess.call("cp -r /home/$USER/Documents/ACC_Development/Quanser_Academic_Resources/5_research/sdcs /home/$USER/Documents/ACC_Development/Development",shell=True)
         if copyPythonDevToROSDocker !=0:
             print("Cannot move QCar2 python dev files... please make sure the Quanser_Academic_Resources repo has been cloned correctly...")
+            return
+        
+        # rename sdcs folder to python_resources
+        renameSDCSFolder = subprocess.call("mv /home/$USER/Documents/ACC_Development/Development/sdcs /home/$USER/Documents/ACC_Development/Development/python_resources", shell=True)
+        if renameSDCSFolder !=0:
+            print("Could not rename sdcs folder to python_resources")
             return
 
         # copy the 0_libraries folder into docker folder 
