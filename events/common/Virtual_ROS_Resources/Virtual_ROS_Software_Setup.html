@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Stage 1 Software Setup</title>
+  <title>Virtual Stage ROS Software Setup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <link rel="stylesheet" href="../../../assets/style.css">
@@ -26,7 +26,7 @@
   </header>
 
   <main class="content">
-    <h1 id="stage-1-software-setup">Stage 1 Software Setup <!-- omit in toc --></h1>
+    <h1 id="virtual-stage-ros-software-setup">Virtual Stage ROS Software Setup <!-- omit in toc --></h1>
 <p>Please go through the following steps to set up a computer with the Quanser Virtual Development Environment.</p>
 <h2 id="description">Description <!-- omit in toc --></h2>
 <p>This document describes:</p>
@@ -37,7 +37,7 @@
 <li><a href="#how-to-run-the-ros2-humble-nodes">How to Run the ROS2 Humble Nodes</a></li>
 </ul>
 <p>By the end of this document, you will have a Quanser Virtual Environment Docker Container that can be used to spawn the QCar 2 in QLabs. You will have a Development Docker Container where you will develop your code and run the ROS2 nodes. And, you will have QLabs installed. The configuration will look like this:</p>
-<p><img alt="QLabsDevelopmentVennDiagram" src="/events/common/Pictures/DevelopmentVennDiagram.png"/></p>
+<p><img alt="QLabsDevelopmentVennDiagram" src="../Pictures/DevelopmentVennDiagram.png"/></p>
 <h2 id="system-requirements">System Requirements</h2>
 <p>Linux System base requirements:</p>
 <ul>
@@ -46,26 +46,21 @@
 </ul>
 <p>Please follow this guide to correctly setup Docker engine on your ground station PC: \
 <a href="https://docs.docker.com/engine/install/ubuntu/">Docker Installation Instructions</a></p>
-<p>Download and set up the ACC Resources:</p>
-<ol>
-<li>Download the ACC resources available from Quanser <a href="https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z">ACC Resources</a>.</li>
-</ol>
-<p>Password: acc2025denver</p>
+<p>Download and set up the Docker Container Resources:</p>
 <ol>
 <li>
-<p>Extract the content of ACC_Resources folder inside the Downloads folder.</p>
+<p>Download <code>setup_linux.py</code> manually from here: <a href="/Virtual_ROS_Resources/env_setup/setup_linux.py">setup_linux.py</a></p>
 </li>
 <li>
-<p>Run the setup_linux.py to configure your development environment</p>
+<p>Run <code>setup_linux.py</code></p>
 </li>
 </ol>
-<p>How your system should look like:</p>
+<p>Your system should look like this after running <code>setup_linux.py</code>:</p>
 <pre><code class="language-bash">/home/$USER/Documents/ACC_Development/ 
-                        L Development/
-                        L isaac_ros_common/
-                        L docker/
-                        L dev/
                         L backup/
+                        L Development/
+                        L docker/
+                        L isaac_ros_common/
 </code></pre>
 <h2 id="how-to-set-up-the-quanser-virtual-environment-docker-container">How to Set Up the Quanser Virtual Environment Docker Container</h2>
 <p>The purpose of this docker container is to ensure safe setup of the Quanser Interactive Labs virtual environment. The below instructions go over how to set this Docker container up.</p>
@@ -73,10 +68,10 @@
 <li>
 <p>Download the latest debian packages (only need to do once):</p>
 <p><code>bash
-wget --no-cache https://repo.quanser.com/debian/prerelease/config/configure_repo_prerelease.sh 
-chmod u+x configure_repo_prerelease.sh
-./configure_repo_prerelease.sh 
-rm -f ./configure_repo_prerelease.sh 
+wget --no-cache https://repo.quanser.com/debian/release/config/configure_repo.sh
+chmod u+x configure_repo.sh
+./configure_repo.sh
+rm -f ./configure_repo.sh
 sudo apt update</code></p>
 </li>
 <li>
@@ -90,7 +85,7 @@ sudo apt-get install qlabs-unreal python3-quanser-apis  quarc-runtime</code></p>
 <li>
 <p>To setup Quanser's custom python docker navigate to the folder:</p>
 <p><code>bash
-cd /home/$USER/Documents/ACC_Development/docker/virtual_qcar2</code></p>
+cd /home/$USER/Documents/ACC_Development/docker/development_docker/quanser_dev_docker_files</code></p>
 <p>And run the following command:</p>
 <p><code>bash
 sudo docker run --rm -it --network host --name virtual-qcar2 quanser/acc2025-virtual-qcar2 bash</code></p>
@@ -156,7 +151,7 @@ python3 Base_Scenarios_Python/Setup_Competition_Map.py</code></p>
 </li>
 </ol>
 <p>Once everything has run to completion, the QLabs world should look like the following:</p>
-<p><img alt="QLabs after running Setup_Competition_Map.py" src="/events/common/Pictures/HowToStart.png"/></p>
+<p><img alt="QLabs after running Setup_Competition_Map.py" src="../Pictures/HowToStart.png"/></p>
 <ol>
 <li>
 <p>If you do not have a Development Docker (Isaac-ROS) container open, follow the above section to open one. The following commands should be run in the Development container.</p>

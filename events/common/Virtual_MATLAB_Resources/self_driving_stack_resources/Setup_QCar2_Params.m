@@ -4,7 +4,7 @@ map_type = 1;
 qcar_types = 2;
 
 
-%% Setting Qcar Sample Times
+%% Setting Qcar Variables
 
 % Various Timing Loops
 Controller_Sample_Time = 1/500;
@@ -15,9 +15,8 @@ LiDAR_Sample_Time = Controller_Sample_Time * ceil(1/15 / Controller_Sample_Time)
 Audio_Sample_Time = Controller_Sample_Time * 100;
 Initialization_Time = 5; %5 seconds to make sure all systems are good
 cameraStepSize = 3e-2;
-NN_Sample_Time = RealSense_Sample_Time*1;
 
-%% Define QCar Params
+NN_Sample_Time = RealSense_Sample_Time*1;
 
 % Size of lidar capture
 SPR_qcar2 = 1000; %Scans per revolution for the LiDAR scan (Long Mode)
@@ -30,7 +29,7 @@ else
     cal_pos = [0, 0, 0] % small map calibration spot
 end
 
-%% Define Kalman Filter Variables
+%% Gyro KF
 GyroKF_sampleTime = 0.001;
 
 GyroKF_X0 = [0;0];
@@ -39,6 +38,8 @@ GyroKF_P0 = eye(2);
 GyroKF_Q = diag([0.01, 0.001]);
 GyroKF_R = 0.01;
 
+
+%% QCar EKF
 QCarEKF_sampleTime = GyroKF_sampleTime;
 
 QCarEKF_L = 0.24;
@@ -56,19 +57,14 @@ QCarEKF_R_combined = diag([0.1, 0.1, 0.01]);
 % lidar to map frame rotations
 qcar2_lidar_to_map_rotation = 0; % qcar 2 lidar already aligned to map frame
 
-
-% load real angles and distances
-load real_distances.mat;
-load real_angles.mat;
-
-real_distances = distance_new;
-real_angles = angles_new;
-
-real_range_qcar2 = real_distances(2: length (real_distances), 2);
-real_angles_qcar2 = real_angles(2: length (real_angles), 2);
-real_range_indicies_qcar2 = find(real_range_qcar2 == 0);
-real_range_qcar2(real_range_indicies_qcar2) = [];
-real_angles_qcar2(real_range_indicies_qcar2) = [];
+% distance and angles need to be loaded from a file based on types of qcars
+load distance_new_qcar2.mat;
+load angles_new_qcar2.mat;
+range_qcar2 = distance_new_qcar2(2: length (distance_new_qcar2), width (distance_new_qcar2)-5);
+angles_qcar2 = angles_new_qcar2(2: length (angles_new_qcar2), width (angles_new_qcar2)-5);
+range_indicies_qcar2 = find(range_qcar2 == 0);
+% range_qcar2(range_indicies_qcar2) = [];
+% angles_qcar2(range_indicies_qcar2) = [];
 
 %% Load and Plot Paths
 

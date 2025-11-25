@@ -34,14 +34,14 @@
 <li><a href="#system-requirements">System Requirements</a></li>
 <li><a href="#setting-up-quanser-interactive-labs-qlabs-with-matlab">Setting up Quanser Interactive Labs (QLabs) with MATLAB</a></li>
 <li><a href="#setting-up-the-matlab-competition-resources">Setting Up the MATLAB Competition Resources</a></li>
-<li><a href="#running-the-resources">Running the Resources</a></li>
+<li><a href="#running-the-self-driving-stack-resources">Running the Self-Driving Stack Resources</a></li>
 </ul>
 <p>By the end of this document, you will have the following development environment set up:</p>
 <h2 id="system-requirements">System Requirements</h2>
 <p><code>OS:</code> Windows 10 or 11</p>
 <p><code>MATLAB Version:</code> 2024a or higher</p>
 <p><code>MATLAB Toolboxes:</code> Simulink Coder, MATLAB Coder, and Control System Toolbox</p>
-<p><code>C++ Compiler:</code> <a href="https://dl.boxcloud.com/d/1/b1!G3gNCWCvPc1wgzxAOhjrlw2WavrVW8dFZteiZo8DCD5LOjWYsoyv1Gkvv4TDcck7p8SthF-L7CrdgV_bVQSGVf3Va09Aepqivq5e-y-Mb3D3X2xpPjtSsKfJgyzefE5jSO09eLO7spIEu2lMI1dVT5SYMOhfSBR31C8ouVIu39-7fhzq0Xu0GCijXe2LainBIOdNtvVW79Ue7JhgH5lcu-C6EUAeOCqo0-bVPAs_Xhtsooc6jyjqUX6ob0JKHCB0IZ3YO0LvGMMsbt8RM9os1vD4wjBZzUir-svHBp-pIsmnVg6RAyuu6yuT_UzsmUt1MEfQXPghMU3tOkoHwU0Kfft6vmupdBdbPBaKRZ7BmdueA4q6w4Z1Pdk3TJ0MeQikd8fd6krB8sbz8HqhydiNgfqO6_vGCEfvNI5fb6XUsAa20jw13VTs_fB99g5SSiTeZXiGGoHn-KROecZ0KuTAz_IEs1l3I0mKrYEB9SNLdJ6vCamXT-_LPPVNfyyVwzuMI4ANdII_8W87MS3leCUVecf_LecnWiQO7Y_Q471lJQkWZZBtbnyfnlh8cdR-_RO5VNd90a09WjIRT52TuE72zqrNYuGCIhEpQhkbXCuNNvnGYDwZ5BThyHvCy-ny4bLgeQsv_iF26m67pPDpvn8TzyD7OaNGGY853NQjECVZNR3nyr7JORuNEIcRHHQOGHEFyj2wHPBryftSiHpe9gnNFx9HO2S7QvhsPBWQcHvyQ7YmNT7XLzUxxKWISghhBHdNXJuTN_I_vW_p9KNYgb139cgGzYFYj5sBDRDt_x-lyejPACYloWjHc9rdQSeosBBAfEnrjNSzJY7cMk4KMQfbsQ5cSCseNwHoq1QQmdvCTzClq8_--7Pmuh5-aeGWStAxcCtPLXH2abf7_Otp09jWE3zlYIryrnaCBUQNCww_fhmt0Bc18Ex3qeaapLBwvzqeurpnIZ9-dbwv9iHVGDbhPW4ApKyn1wAiuUl3omTtlLD8JS124zRfJUy-10I-AxXU6BrZV_DPvORn2PoH2p4e2uYbhuJh_3_m3rU-TPAnIqS0ucO2wJheBE_Oj3BCUBWon4IR4tcY4nWDo4ArKVLA_oKi_qrQSP2j5G47PQuDhObQyir_JX_Wy3QB-trKUUKCgvlvxaoFQUeuAP94HKU9Ks_mpVkb7cZdgrWXArn7C1ST5oApycI69ThO-Yl8Rdj3fHekx8OxEi05GRPTGM-qhWpozzkvS9k004nTdLXRyoQsyBSrbZUWYam5ZICrTImeHCKBg6XMwzKEZzmD_aX7XgE_Z41PRidPIWQxh5ORo0NQzattTdX-6nrESaPBH3OR1uEoM2R6hmbzf1rZxC5NbEcWKiSlf5IEfJdvAouyeyTvZgb-zoFIkB39l2KtqWckzwGLkykBN1xQU-2Oau3tl3JbcG9yknivbS1v1rUye0IlDV1HqSZlrdrEgr0KOlDI1fSP3gpDyVh1hChnLVQMBHIHhoxWzkbRIflbZ7zl6Ld2q_69/download">Visual Studio 2019 Community</a> (Desktop development with C++)</p>
+<p><code>C++ Compiler:</code> <a href="https://quanserinc.box.com/s/ffe1ud4hikxdau9qwdlxf0ali07d1l6c">Visual Studio 2019 Community</a> (Desktop development with C++)</p>
 <p><code>Minimum Hardware:</code></p>
 <ul>
 <li>Graphics Card: Intel UHD or Intel Iris Xe integrated GPU, or equivalent</li>
@@ -67,7 +67,9 @@
 </li>
 <li>
 <p>Follow this guide to install QUARC 2025 SP1 (this will install QLabs): <a href="https://download.quanser.com/doc/2025sp1/QUARC_Quick_Installation_Guide_Local_License.pdf">QUARC 2025 SP1 Installation Guide</a></p>
-<p>a. Use the license file (.qlic) you installed in Step 1 along with the guide</p>
+<ul>
+<li>Use the license file (.qlic) you downloaded in Step 1 along with the guide</li>
+</ul>
 </li>
 <li>
 <p>Register for QLabs on the <a href="https://portal.quanser.com/Accounts/Register">Quanser Academic Portal</a></p>
@@ -80,14 +82,19 @@
 <p>Follow the instructions here to download the Quanser Academic Resources: <a href="https://github.com/quanser/Quanser_Academic_Resources?tab=readme-ov-file#downloading-resources">Quanser Academic Resources Download</a></p>
 </li>
 <li>
-<p>Run the following two batch files:</p>
+<p>Run the following batch file with the following guidelines:</p>
+<ul>
+<li>You are using MATLAB only</li>
+<li>You are using both virtual and hardware</li>
+</ul>
+<p><code>C:\Users\&lt;username&gt;\Documents\Quanser\1_setup\step_1_check_requirements.bat</code></p>
+</li>
+<li>
+<p>Run the following batch file:</p>
+<p><code>C:\Users\&lt;username&gt;\Documents\Quanser\1_setup\configure_matlab.bat</code></p>
 </li>
 </ol>
-<p><code>matlab
-   C:\Users\&lt;username&gt;\Documents\Quanser\1_setup\step_1_check_requirements.bat
-   C:\Users\&lt;username&gt;\Documents\Quanser\1_setup\configure_matlab.bat</code></p>
-<pre><code>These resources will contain all the Quanser Resources for all of Quanser's products, but the [SDCS lab content](https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/docs/start_labs.md#sdcs) will be the most relevant.
-</code></pre>
+<p>These resources will contain all the Quanser Resources for all of Quanser's products, but the <a href="https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/docs/start_labs.html#sdcs">SDCS lab content</a> will be the most relevant.</p>
 <p><strong>Second</strong>, the Github repo containing the student competition resources for MATLAB will be downloaded:</p>
 <ol>
 <li>
@@ -95,42 +102,38 @@
 </li>
 <li>
 <p>Open a CMD Window in this directory by right-clicking in the blank space and selecting <code>Open in Terminal</code></p>
+<p><img alt="open_in_terminal" src="../Pictures/open_in_terminal.png"/></p>
 </li>
-</ol>
-<center>
-
-![open_in_terminal](/events/common/Pictures/open_in_terminal.png)
-
-</center>
-<ol>
 <li>
 <p>Clone the following Github Repo into the Documents folder using the following command:</p>
 <p><code>bash
 git clone https://github.com/quanser/student-competition-resources-matlab.git</code></p>
 </li>
 </ol>
-<h2 id="running-the-resources">Running the Resources</h2>
+<h2 id="running-the-self-driving-stack-resources">Running the Self-Driving Stack Resources</h2>
 <p>Follow the below instructions to make sure everything is set up correctly and learn how to use the provided resources:</p>
 <ol>
 <li>
-<p>Using MATLAB navigate to the <code>student-competition-resources-matlab</code> (make sure you double -click on folders and don't expand them)</p>
+<p>Using MATLAB navigate to the <code>/student-competition-resources-matlab/Virtual_MATLAB_Resources/self_driving_stack_resources</code> (make sure you double -click on folders and don't expand them)</p>
 </li>
 <li>
 <p>Open QLabs and navigate to <code>Self-Driving Car Studio</code> =&gt; <code>Plane</code></p>
-<p><img alt="qlabs plane" src="/events/common/Pictures/plane_world_qlabs.png"/></p>
+<p><img alt="qlabs plane" src="../Pictures/plane_world_qlabs.png"/></p>
 </li>
 <li>
 <p>Run the <code>Setup_Competition_Map.m</code> script</p>
-<p>a. Make sure the <code>spawn_location</code> variable is <code>1</code> (top of the script)</p>
+<ul>
+<li>Make sure the <code>spawn_location</code> variable is <code>1</code> (top of the script)</li>
+</ul>
 <p>It should look like this after running the script:</p>
-<p><img alt="competition map" src="/events/common/Pictures/qlabs_setup_competition_map.png"/></p>
+<p><img alt="competition map" src="../Pictures/qlabs_setup_competition_map.png"/></p>
 </li>
 <li>
 <p>Open <code>QCar2_Virtual_calibrate.slx</code></p>
 </li>
 <li>
 <p>Use 'Monitor &amp; Tune' to run the model</p>
-<p><img alt="competition map" src="/events/common/Pictures/monitor_and_tune.png"/></p>
+<p><img alt="competition map" src="../Pictures/monitor_and_tune.png"/></p>
 </li>
 <li>
 <p>Change <code>spawn_location</code> to <code>2</code> in the <code>Setup_Competition_Map.m</code> script</p>
@@ -146,7 +149,7 @@ git clone https://github.com/quanser/student-competition-resources-matlab.git</c
 </li>
 <li>
 <p>Use 'Monitor &amp; Tune' to run the model</p>
-<p><img alt="competition map" src="/events/common/Pictures/monitor_and_tune.png"/></p>
+<p><img alt="competition map" src="../Pictures/monitor_and_tune.png"/></p>
 </li>
 </ol>
   </main>
