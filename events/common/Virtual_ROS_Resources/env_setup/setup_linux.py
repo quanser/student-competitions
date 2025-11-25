@@ -79,6 +79,18 @@ def main():
             print("Unable to copy the Development Docker Files.... please delete folder ACC_Development folder and try again.. ")
             return
         
+        # Make miscs folder in docker folder in ACC DEVELOPMENT
+        makeMiscsFolder =  subprocess.call(" mkdir /home/$USER/Documents/ACC_Development/docker/miscs",shell=True)
+        if makeMiscsFolder !=0:
+            print("Issue creating miscs folder")
+            return
+        
+        # Copy misc files into miscs folder in docker folder in ACC DEVELOPMENT
+        copyMiscFiles = subprocess.call("cp -r /home/$USER/Documents/ACC_Development/student-competitions/events/common/Virtual_ROS_Resources/env_setup/docker_resources/miscs /home/$USER/Documents/ACC_Development/docker/miscs", shell=True)
+        if copyMiscFiles !=0:
+            print("Cannot copy misc files... please make sure the student-competitions repo has been cloned correctly...")
+            return
+
         # Make isaac_ros_common folder in ACC DEVELOPMENT
         makeIsaacROSCommonFolder =  subprocess.call(" mkdir /home/$USER/Documents/ACC_Development/isaac_ros_common",shell=True)
         if makeIsaacROSCommonFolder !=0:

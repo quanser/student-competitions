@@ -25,25 +25,20 @@ Linux System base requirements:
 Please follow this guide to correctly setup Docker engine on your ground station PC: \
 [Docker Installation Instructions](https://docs.docker.com/engine/install/ubuntu/)
 
-Download and set up the ACC Resources:
+Download and set up the Docker Container Resources:
 
-1. Download the ACC resources available from Quanser [ACC Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z).
+1. Download the `setup_linux.py` from here: [setup_linux.py](https://github.com/quanser/student-competitions/blob/main/events/common/Virtual_ROS_Resources/env_setup/setup_linux.py)
 
-   Password: acc2025denver
+2. Run `setup_linux.py`
 
-2. Extract the content of ACC_Resources folder inside the Downloads folder.
-
-3. Run the setup_linux.py to configure your development environment
-
-How your system should look like:
+Your system should look like this after running `setup_linux.py`:
 
 ``` bash
 /home/$USER/Documents/ACC_Development/ 
-                        L Development/
-                        L isaac_ros_common/
-                        L docker/
-                        L dev/
                         L backup/
+                        L Development/
+                        L docker/
+                        L isaac_ros_common/
 ```
 
 ## How to Set Up the Quanser Virtual Environment Docker Container
@@ -71,7 +66,7 @@ The purpose of this docker container is to ensure safe setup of the Quanser Inte
 4. To setup Quanser's custom python docker navigate to the folder:
 
     ```bash
-    cd /home/$USER/Documents/ACC_Development/docker/virtual_qcar2
+    cd /home/$USER/Documents/ACC_Development/docker/quanser_docker
     ```
 
     And run the following command:
