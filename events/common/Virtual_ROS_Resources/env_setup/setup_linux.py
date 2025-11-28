@@ -39,10 +39,10 @@ def main():
         #     cloneStudentCompetitionsRepo = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone https://github.com/quanser/student-competitions.git", shell=True)
 
         # Clone Quanser Academic Resources repo to get qcar 2 specific resources
-        cloneAcademicResources = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone -b main https://github.com/quanser/Quanser_Academic_Resources.git", shell=True)
+        cloneAcademicResources = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone -b dev-qcar https://github.com/quanser/Quanser_Academic_Resources.git", shell=True)
         if cloneAcademicResources!=0:
             subprocess.call("sudo apt-get install git", shell = True)
-            cloneStudentCompetitionsRepo = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone -b main https://github.com/quanser/Quanser_Academic_Resources.git", shell=True)
+            cloneStudentCompetitionsRepo = subprocess.call("cd /home/$USER/Documents/ACC_Development/; git clone -b dev-qcar https://github.com/quanser/Quanser_Academic_Resources.git", shell=True)
 
 
 
@@ -60,7 +60,6 @@ def main():
         #           ├── development_docker (was isaac_ros)
         #           ├── quanser_docker (was virtual_qcar2)
         #           ├── 0_libraries
-        #           ├── miscs
         #    ├── isaac_ros_common
         #
 
@@ -85,18 +84,6 @@ def main():
         if copyDevelopmentDockerFiles !=0:
             print("Unable to copy the Development Docker Files.... please delete folder ACC_Development folder and try again.. ")
             return
-        
-        # Make miscs folder in docker folder in ACC DEVELOPMENT
-        makeMiscsFolder =  subprocess.call(" mkdir /home/$USER/Documents/ACC_Development/docker/miscs",shell=True)
-        if makeMiscsFolder !=0:
-            print("Issue creating miscs folder")
-            return
-        
-        # Copy misc files into miscs folder in docker folder in ACC DEVELOPMENT
-        copyMiscFiles = subprocess.call("cp -r /home/$USER/Documents/ACC_Development/student-competition-resources-ros/Virtual_ROS_Resources/env_setup/docker_resources/miscs /home/$USER/Documents/ACC_Development/docker/miscs", shell=True)
-        if copyMiscFiles !=0:
-            print("Cannot copy misc files... please make sure the student-competition-resources-ros repo has been cloned correctly...")
-            return
 
         # Make isaac_ros_common folder in ACC DEVELOPMENT
         makeIsaacROSCommonFolder =  subprocess.call(" mkdir /home/$USER/Documents/ACC_Development/isaac_ros_common",shell=True)
@@ -108,6 +95,12 @@ def main():
         copyIsaacROSCommonFiles = subprocess.call("cp -r /home/$USER/Documents/ACC_Development/student-competition-resources-ros/Virtual_ROS_Resources/env_setup/isaac_ros_common /home/$USER/Documents/ACC_Development", shell=True)
         if copyIsaacROSCommonFiles !=0:
             print("Cannot copy Isaac ROS Common files... please make sure the student-competition-resources-ros repo has been cloned correctly...")
+            return
+        
+        # Copy .isaac_ros_common_config file into isaac_ros_common/scripts folder
+        copyIsaacrosconfig = subprocess.call("cp -r /home/$USER/Documents/ACC_Development/student-competition-resources-ros/Virtual_ROS_Resources/env_setup/docker_resources/development_docker/isaac_ros_common_config/.isaac_ros_common-config /home/$USER/Documents/ACC_Development/isaac_ros_common/scripts", shell=True)
+        if copyIsaacrosconfig !=0:
+            print("Cannot copy .isaac_ros_common_config... please make sure the student-competition-resources-ros repo has been cloned correctly...")
             return
 
         ### Source is from Academic Resources repo ###
@@ -134,15 +127,32 @@ def main():
         if renameSDCSFolder !=0:
             print("Could not rename sdcs folder to python_resources")
             return
+        
+        # delete ros files
+        rosFlag = 0
+        deleteROSFiles = subprocess.call("rm -r /home/$USER/Documents/ACC_Development/Development/python_resources/qcar/hardware/ros1_cpp", shell=True)
+        rosFlag += deleteROSFiles
+        deleteROSFiles = subprocess.call("rm -r /home/$USER/Documents/ACC_Development/Development/python_resources/qcar/hardware/ros1_python", shell=True)
+        rosFlag += deleteROSFiles
+        deleteROSFiles = subprocess.call("rm -r /home/$USER/Documents/ACC_Development/Development/python_resources/qcar/hardware/ros2", shell=True)
+        rosFlag += deleteROSFiles
+        deleteROSFiles = subprocess.call("rm -r /home/$USER/Documents/ACC_Development/Development/python_resources/qcar2/ros2", shell=True)
+        rosFlag += deleteROSFiles
+        if deleteROSFiles !=0:
+            print("There may be issues removing the ROS resources")
+            return
+
 
         # copy the 0_libraries folder into docker folder 
         copyLibrariesToROSDocker =  subprocess.call("cp -r /home/$USER/Documents/ACC_Development/Quanser_Academic_Resources/0_libraries /home/$USER/Documents/ACC_Development/docker",shell=True)
         if copyLibrariesToROSDocker !=0:
             print("Issue copying libraries to docker folder... please make sure the Quanser_Academic_Resources repo has been cloned correctly...")
             return
-
-
-
+        
+        copyLibrariesToROSDockerfiles = subprocess.call("cp -r /home/$USER/Documents/ACC_Development/Quanser_Academic_Resources/0_libraries /home/$USER/Documents/ACC_Development/docker/development_docker/quanser_dev_docker_files",shell=True)
+        if copyLibrariesToROSDockerfiles !=0:
+            print("Issue copying libraries to docker files folder... please make sure the Quanser_Academic_Resources repo has been cloned correctly...")
+            return
 
         ##############################################################
         ########### CLEANUP AND BACKUP OF REPOSITORIES ##############

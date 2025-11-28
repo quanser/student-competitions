@@ -52,6 +52,7 @@
 <ol>
 <li>
 <p>Download <code>setup_linux.py</code> manually from here: <a href="/Virtual_ROS_Resources/env_setup/setup_linux.py">setup_linux.py</a></p>
+<p><img alt="manually downloading file" src="../Pictures/github_manually_downloading_file.png"/></p>
 </li>
 <li>
 <p>Run <code>setup_linux.py</code></p>
@@ -90,7 +91,7 @@ sudo apt-get install qlabs-unreal python3-quanser-apis  quarc-runtime</code></p>
 cd /home/$USER/Documents/ACC_Development/docker/development_docker/quanser_dev_docker_files</code></p>
 <p>And run the following command:</p>
 <p><code>bash
-sudo docker run --rm -it --network host --name virtual-qcar2 quanser/acc2025-virtual-qcar2 bash</code></p>
+sudo docker run --rm -it --network host --name virtual-qcar2 quanser/virtual-qcar2 bash</code></p>
 <p>This docker container will include the following setup scripts:</p>
 <p><code>bash
 /home/qcar2_scripts/python 
@@ -103,7 +104,7 @@ docker exec -it virtual-qcar2 bash</code></p>
 </li>
 </ol>
 <p><strong>To pull the most recent version of the Docker container (after you go through the below steps first) from Dockerhub use the following command:</strong></p>
-<pre><code class="language-bash">docker pull quanser/acc2025-virtual-qcar2:latest
+<pre><code class="language-bash">docker pull quanser/virtual-qcar2:latest
 </code></pre>
 <h2 id="set-up-the-development-docker-container">Set Up the Development Docker Container</h2>
 <p>For software development we will leverage the isaac_ros docker container. This container can be used for:</p>
@@ -174,7 +175,7 @@ colcon build</code></p>
 ros2 launch qcar2_nodes qcar2_virtual_launch.py</code></p>
 </li>
 </ol>
-<p><strong>IMPORTANT:</strong> For tips and guides on how to develop in this container, visit the <a href="/events/common/Virtual_ROS_Resources/Virtual_ROS_Development_Guide.html">Virtual ROS Devlopment Guide</a>.</p>
+<p><strong>IMPORTANT:</strong> For tips and guides on how to develop in this container, visit the <a href="/Virtual_ROS_Resources/Virtual_ROS_Development_Guide.html">Virtual ROS Devlopment Guide</a>.</p>
         </main>
 
         <footer class="site-footer">
