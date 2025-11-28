@@ -19,6 +19,7 @@ This document contains the following:
 - Registration is now live: [SMiLE Hackathon Registration](https://forms.office.com/r/kqKBvcEJ8F)
 - **This competition's supported language is MATLAB/Simulink**.
 - There are currently delays with the technical resources. The new release date will be Dec 1.
+- The [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab) are now released!
 
 ## 🕙 Competition Structure and Timeline 🕙
 
@@ -29,7 +30,7 @@ Please see the below table for a timeline containing important dates. Keep in mi
 | Date      | Event             | Description                |
 |:-------:  |:-----             | :--------                   |
 | Nov 18 | Registration Opens   | Registration Link: [SMiLE Hackathon Registration](https://forms.office.com/r/kqKBvcEJ8F) |
-| Dec 1 | Release of Technical Resources  | The MATLAB/Simulink technical resources will be released and students can begin development. |
+| Dec 1 | Release of [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab)  | The MATLAB/Simulink technical resources will be released and students can begin development. |
 | Nov 24 - Feb 7 | Virtual Stage | Teams will gain access to QLabs where they will implement their self-driving algorithm on the virtual QCar 2. Teams will then submit a video showcasing their progress. |
 | Feb 8-9 | In-person Workshop | Teams will come to a workshop at the SMiLE conference where they will port their algorithms to the physical QCar 2 with the help of a Quanser representative.|
 | Feb 10-11 | Physical Stage | Teams will compete live at the SMiLE conference! |
@@ -39,6 +40,8 @@ Please see the below table for a timeline containing important dates. Keep in mi
 ## 💻 Supported Software 💻
 
 In this competition **ONLY MATLAB/Simulink will be allowed for submissions**.
+
+The MATLAB resources can be found here: [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab)
 
 ## 🪧 Competition Objective 🪧
 
@@ -57,6 +60,7 @@ Coming soon!
 - [SMiLE Hackathon Registration](https://forms.office.com/r/kqKBvcEJ8F)
 - [Virtual Stage Competition Guide](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md)
 - [Physical Stage Competition Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Guide.md)
+- [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab)
 
 **Mathworks Learning Modules:**
 

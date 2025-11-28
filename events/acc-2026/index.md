@@ -18,6 +18,7 @@ This document contains the following:
 - Please watch here for information on registration, Technical Resources, and competition specific information.
 - Registration Now Live (11/18/2025): [ACC Registration](https://forms.office.com/pages/responsepage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BUOFJHQjRONDhYMEhHSUZEUlJJUFc1QlFZMS4u&route=shorturl)
 - There are currently delays with the technical resources. The new release date will be Dec 1.
+- The [ROS Technical Resources](https://github.com/quanser/student-competition-resources-ros) are now released!
 
 ## 🕙 Competition Structure and Timeline 🕙
 
@@ -28,7 +29,7 @@ Please see the below table for a timeline containing important dates. Keep in mi
 | Date      | Event             | Description              |
 |:-------:  |:-----             | :--------                |
 | Nov 18 | Registration Opens   | Registration Link: [ACC Registration](https://forms.office.com/pages/responsepage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BUOFJHQjRONDhYMEhHSUZEUlJJUFc1QlFZMS4u&route=shorturl) |
-| Dec 1 | Release of Technical Resources  | The ROS technical resources will be released and students can begin development. |
+| Dec 1 | Release of [ROS Technical Resources](https://github.com/quanser/student-competition-resources-ros)  | The ROS technical resources will be released and students can begin development. |
 | Dec 1 - Feb 27 | Virtual Stage | Teams will develop their self-driving algorithms in QLabs and prepare a video submission to the judges. |
 | March 2-7 | Virtual Stage Evaluation | Judges will view the video submissions and determine who will be invited to the in-person event at the ACC. |
 | March 9 - May 22 | Physical Implementation | Teams will be sent physical QCar 2s, where they will implement their algorithms. |
@@ -39,6 +40,8 @@ Please see the below table for a timeline containing important dates. Keep in mi
 ## 💻 Supported Software 💻
 
 In this competition **any softwares will be allowed for submissions**, but competition organizers will only be responding to technical questions about ROS.
+
+Resources for ROS are here: [ROS Technical Resources](https://github.com/quanser/student-competition-resources-ros)
 
 ## 🪧 Competition Objective 🪧
 
@@ -59,6 +62,7 @@ Coming soon!
 - [ACC Registration](https://forms.office.com/pages/responsepage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BUOFJHQjRONDhYMEhHSUZEUlJJUFc1QlFZMS4u&route=shorturl)
 - [Virtual Stage Competition Guide](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md)
 - [Physical Stage Competition Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Guide.md)
+- [ROS Technical Resources](https://github.com/quanser/student-competition-resources-ros)
 
 **Supporting Documentation:**
 

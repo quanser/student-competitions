@@ -19,6 +19,7 @@ This document contains the following:
 - Registration Now Live (11/18/2025): [CPS IoT Competition Registration](https://forms.office.com/pages/responsepage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BURDdNS1BIOEZNVTI3RFNHSkRMODk2OUo0MC4u&route=shorturl)
 - ONLY MATLAB/Simulink will be supported in this competition and a Mathworks license can be requested from here: [MathWorks Student Competition license](https://www.mathworks.com/academia/academic-support/student-competition-individual-team.html)
 - There are currently delays with the technical resources. The new release date will be Dec 1.
+- The [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab) are now released!
 
 ## 🕙 Competition Structure and Timeline 🕙
 
@@ -29,7 +30,7 @@ Please see the below table for a timeline containing important dates. Keep in mi
 | Date      | Event             | Description                   |
 |:-------:  |:-----             | :--------                     |
 | Nov 18   | Registration Opens| Registration Link: [CPS IoT Competition Registration](https://forms.office.com/pages/responsepage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BURDdNS1BIOEZNVTI3RFNHSkRMODk2OUo0MC4u&route=shorturl) |
-| Dec 1 | Release of Technical Resources  | The MATLAB/Simulink technical resources will be released and students can begin development. |
+| Dec 1 | Release of [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab)  | The MATLAB/Simulink technical resources will be released and students can begin development. |
 | Dec 1 - May 9 | Virtual Stage | Teams will develop their self-driving car algorithms in QLabs and submit a video showcasing their algorithm and its readiness. |
 | Late Jan (date TBD) | Webinar for Competition Resources | A webinar will be held to go over what resources are available to students and provide a chance for students to ask questions to the competition organizers. |
 | May 9 | Finalists Selection and Development | Finalists will be selected based on video submissions to come to CPS IoT in France in person. Teams will continue to develop in the virtual environment.|
@@ -43,6 +44,8 @@ Please see the below table for a timeline containing important dates. Keep in mi
 In this competition **ONLY MATLAB/Simulink will be allowed for submissions**.
 
 If you need a **Mathworks license**, you can request one from here: [MathWorks Student Competition license](https://www.mathworks.com/academia/academic-support/student-competition-individual-team.html)
+
+The MATLAB resources can be found here: [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab)
 
 ## 🪧 Competition Objective 🪧
 
@@ -64,6 +67,7 @@ Coming soon!
 - [Request a MathWorks Student Competition license](https://www.mathworks.com/academia/academic-support/student-competition-individual-team.html) (IMPORTANT)
 - [Virtual Stage Competition Guide](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md)
 - [Physical Stage Competition Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Guide.md)
+- [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab)
 
 **Mathworks Learning Modules:**
 
