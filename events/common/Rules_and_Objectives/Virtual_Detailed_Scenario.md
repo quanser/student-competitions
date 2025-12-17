@@ -6,21 +6,21 @@ Below is a step-by-step sequence of events that are representative of what will 
 
 ## Scenario
 
-1. Run the [Setup_Real_Scenario.py](XXXXXXXX) file. This will spawn the QCar 2 in the Taxi Hub Area:
+1. Run the [Setup_Real_Scenario.py](../Virtual_ROS_Resources/env_setup/docker_resources/quanser_docker/python/Base_Scenarios_Python/Setup_Real_Scenario.py) file. This will spawn the QCar 2 in the Taxi Hub Area:
 
-![Taxi Hub Area](../Pictures/TaxiHubArea.png)
+    ![Taxi Hub Area](../Pictures/TaxiHubArea.png)
 
-1. Change the LED strip on the QCar to <span style="color: red;"> Red </span>.
+2. Change the LED strip on the QCar to <span style="color: red;"> Red </span>.
 
-2. Change the LEDs to <span style="color: green;"> Green </span> and navigate to the pick-up coordinate [0.125, 4.395] (meters):
+3. Change the LEDs to <span style="color: green;"> Green </span> and navigate to the pick-up coordinate [0.125, 4.395] (meters):
 
-![Pick-Up coordinate](../Pictures/PickUpCoordinate.png)
+    ![Pick-Up coordinate](../Pictures/PickUpCoordinate.png)
 
 4. Come to a full stop and change the LED strip to <span style="color: blue;"> Blue </span> to indicate a passenger pick up.
 
 5. Navigate to the drop-off coordinate [-0.905, 0.800] (meters):
 
-![Drop Off Coordinate](../Pictures/DropOffCoordinate.png)
+    ![Drop Off Coordinate](../Pictures/DropOffCoordinate.png)
 
 6. Come to a full stop and change the LED strip to <span style="color: orange;"> orange</span> to indicate a passenger drop off.
 

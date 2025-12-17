@@ -24,20 +24,21 @@ Teams will be ranked using the following criteria:
 3. Timely reaction to road signage and traffic controls while adhering to traffic laws as stated in the Traffic Controls Rules section.
 
 4. Clear and concise communication of Self-Driving concepts demonstrated in the video.
-
-   a. This is one of the most important criteria because it will show the judges how well a team understands the principles of self-driving.
+   - This is one of the most important criteria because it will show the judges how well a team understands the principles of self-driving.
 
 ## Virtual Stage Submission Requirements
 
 1. Controlling the QCar or gathering data via the qvl library functions will invalidate any submission.
 
-2. Maximum 3-minute video demonstration of the Self-Driving capabilities and explanations.
+2. The Software Requirements on the [Competition Page](https://quanser.github.io/student-competitions/) for the competition you are participating in must be followed.
 
-3. The submission must provide the following:
+3. Maximum 3-minute video demonstration of the Self-Driving capabilities and explanations.
 
-    a. Software: GitHub link to the repository with your team’s submission. The code may be reviewed.
+4. The submission must provide the following:
 
-    b. Video:  YouTube link demonstrating your code.
+    - Software: GitHub link to the repository with your team’s submission. The code may be reviewed.
+
+    - Video:  YouTube link demonstrating your code.
 
 ## Core-Principles of Self-Driving
 

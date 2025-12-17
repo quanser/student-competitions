@@ -8,6 +8,7 @@ This document contains the following topics:
 - [Ride Ratings](#ride-ratings)
 - [Scoring System](#scoring-system)
 - [Coordinate System](#coordinate-system)
+- [Competition Day Details](#competition-day-details)
 
 ## Physical Stage Detailed Objective
 
@@ -23,7 +24,7 @@ When driving between coordinates, teams must change their LED strip to <span sty
 
 The sequence of a single ride will consist of the following:
 
-1. The QCar 2 will start in the Taxi Hub Area with <span style="color: red;"> Red </span> LEDs for 3 seconds.
+1. The QCar 2 will start in the Taxi Hub Area with <span style="color: red;"> Red </span> LEDs.
 
 2. Teams will need to write down (or call out) the ride number they are attempting and show the judges.
 
@@ -104,3 +105,9 @@ Throughout the competition the following coordinate system will be used. The sam
 ![OriginOfTheBaseCoordinateFrame](../Pictures/OriginOfTheMap.png)
 
 Figure 2: Base Frame of the Coordinate System in the Competition Roadmap
+
+## Competition Day Details
+
+Please see the following guide for a list of things needed for the physical competition:
+
+[Compeitition Day Guide](./Physical_Stage_Competition_Day_Guide.md)

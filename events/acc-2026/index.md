@@ -6,12 +6,20 @@ The competition objective this year is for teams to create a self-driving algori
 
 This document contains the following:
 
+- [🪧 Competition Objective 🪧](#-competition-objective-)
 - [❗Announcements 🎤](#announcements-)
 - [🕙 Competition Structure and Timeline 🕙](#-competition-structure-and-timeline-)
-- [💻 Supported Software 💻](#-supported-software-)
-- [🪧 Competition Objective 🪧](#-competition-objective-)
+- [💻 Software Requirements 💻](#-software-requirements-)
 - [❓ FAQ ❓](#-faq-)
 - [🗄️ Competition Resources 🗄️](#️-competition-resources-️)
+
+## 🪧 Competition Objective 🪧
+
+During the **virtual stage** of this competition, the objective will be to create a video in QLabs that highlights your self-driving algorithm and readiness to compete live at the even. Please use the [Virtual Stage Competition Guide](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md) as a **detailed guide for the expectations**.
+
+Finalists will be selected to move on to the physical stage of the competition based on the video submitted during the virtual stage of the competition.
+
+During the **physical stage** of this competition, the objective will be to implement your self-driving algorithm on the physical QCar 2. **The specific task for your self-driving algorithm** is laid out in the [Physical Stage Competition Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Guide.md).
 
 ## ❗Announcements 🎤
 
@@ -37,23 +45,15 @@ Please see the below table for a timeline containing important dates. Keep in mi
 
 </center>
 
-## 💻 Supported Software 💻
+## 💻 Software Requirements 💻
 
 In this competition **any softwares will be allowed for submissions**, but competition organizers will only be responding to technical questions about ROS.
 
 Resources for ROS are here: [ROS Technical Resources](https://github.com/quanser/student-competition-resources-ros)
 
-## 🪧 Competition Objective 🪧
-
-During the **virtual stage** of this competition, the objective will be to create a video in QLabs that highlights your self-driving algorithm and readiness to compete live at the even. Please use the [Virtual Stage Competition Guide](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md) as a **detailed guide for the expectations**.
-
-Finalists will be selected to move on to the physical stage of the competition based on the video submitted during the virtual stage of the competition.
-
-During the **physical stage** of this competition, the objective will be to implement your self-driving algorithm on the physical QCar 2. **The specific task for your self-driving algorithm** is laid out in the [Physical Stage Competition Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Guide.md).
-
 ## ❓ FAQ ❓
 
-Coming soon!
+For any competition related inquiries, please email: studentcompetition@quanser.com
 
 ## 🗄️ Competition Resources 🗄️
 

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Traffic Light Intersection Setup Guide 🪧</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../../../../assets/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="header-left">
+                    
+                </div>
+
+                <div class="header-middle">
+                    <h1>Quanser Student Competitions</h1>
+                </div>
+
+                <div class="header-right">
+                    <img src="../../../../assets/logos/full colour_dark background_tagline.png" alt="Quanser Student Competitions logo" class="site-logo">
+                </div>
+            </div>
+            <div class="header-banner">
+                <img src="../../../../assets/banners/quanser_banner.jpg" alt="Competition banner" class="header-banner-img">
+            </div>
+        </header>
+
+        <main class="content">
+            <h1 id="traffic-light-intersection-setup-guide">Traffic Light Intersection Setup Guide 🪧 <!-- omit in toc --></h1>
+<p>This document covers how to setup a 4-way intersection on the Quanser Large Roadmap and some tips and tricks that may help with traffic lights throughout the competition.</p>
+<h2 id="topics">Topics <!-- omit in toc --></h2>
+<p>This document contians the following:</p>
+<ul>
+<li><a href="#existing-documentation">Existing Documentation</a></li>
+<li><a href="#how-to-set-the-static-ip-for-a-quanser-traffic-light">How to Set the Static IP for a Quanser Traffic Light</a></li>
+<li><a href="#setting-up-a-4-way-intersection">Setting Up a 4-Way Intersection</a></li>
+</ul>
+<h2 id="existing-documentation">Existing Documentation</h2>
+<p>The Quanser Academic Resources Github contains important information about using the Quanser Traffic Lights:</p>
+<ul>
+<li><a href="https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/3_user_manuals/traffic_light/user_manual_traffic_light.pdf">Traffic Light User Manual</a></li>
+<li><a href="https://github.com/quanser/Quanser_Academic_Resources/tree/dev-windows/5_research/sdcs/traffic_light">Traffic Light Example Code</a></li>
+</ul>
+<p>The user manual should be read for information on how to connect to the traffic lights and operate them.</p>
+<h2 id="how-to-set-the-static-ip-for-a-quanser-traffic-light">How to Set the Static IP for a Quanser Traffic Light</h2>
+<p>This guide assumes you are using the Quanser Router or a router that is broadcasting the SSID: Quanser_UVS. If you do not use this SSID, the router will not connect.</p>
+<p>Setting a static IP Address for the traffic lights is useful for the competition because you do not need to check the IP Address of the traffic light every time it is booted. This will make swapping the battery much easier since you know what the IP Address will be once the Traffic Lights boot up. Follow the below steps to change the IP Addresses:</p>
+<ol>
+<li>
+<p>Ensure only 1 traffic light is powered on (this makes it easier to identify and set the IP Addresses)</p>
+</li>
+<li>
+<p>Ensure the router is on and your computer is connected to the router (ethernet connection is better)</p>
+</li>
+<li>
+<p>Connect to the router via a browser by entering the IP Address: 192.168.2.1</p>
+</li>
+<li>
+<p>Log into the router</p>
+</li>
+<li>For a Quanser Router the following is relevant:</li>
+<li>Username: admin</li>
+<li>
+<p>Password: Quanser_123</p>
+</li>
+<li>
+<p>Go into the <code>ADVANCED</code> tab, then <code>Setup</code> -&gt; <code>LAN Setup</code></p>
+</li>
+<li>
+<p>Under <code>Address Reservation</code> select <code>Add</code></p>
+<p><img alt="address reservation tab" src="../../Pictures/static_ip_address_reservation.png"/></p>
+</li>
+<li>
+<p>Select the traffic light in the <code>Address Reservation Table</code>, change the IP Address to 192.168.2.20 and click <code>Add</code></p>
+<p><img alt="address reservation add" src="../../Pictures/static_ip_adding_address.png"/></p>
+</li>
+<li>
+<p>You should see the traffic light in the <code>Address Reservation</code> list</p>
+</li>
+<li>
+<p>Click <code>Apply</code> at the top of the page</p>
+</li>
+<li>
+<p>Label the traffic light with the IP Address IMMEDIATELYa</p>
+</li>
+</ol>
+<p>Repeat this process for the other traffic lights using the IP Addresses:</p>
+<ul>
+<li>192.168.2.21</li>
+<li>192.168.2.22</li>
+<li>192.168.2.23</li>
+</ul>
+<h2 id="setting-up-a-4-way-intersection">Setting Up a 4-Way Intersection</h2>
+<p>To set up a 4-way intersection, make sure you have set the static IP Addresses. Then do the following:</p>
+<ol>
+<li>
+<p>Ensure you have <a href="https://github.com/quanser/Quanser_Academic_Resources?tab=readme-ov-file#downloading-resources">downloaded the Quanser Academic Resources</a> and <a href="https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/docs/pc_setup.html#if-you-are-using-python">setup your computer for using Python</a></p>
+</li>
+<li>
+<p>Download the <a href="./4WayIntersection.py">4 Way Intersection Python Script</a> manually</p>
+<p><img alt="manual download of file in github" src="../../Pictures/github_manually_downloading_file.png"/></p>
+</li>
+<li>
+<p>Ensure the Traffic Lights are on</p>
+</li>
+<li>
+<p>Run the Python script</p>
+</li>
+</ol>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Quanser. All Rights Reserved. </p>
+        </footer>
+    </body>
+</html>
