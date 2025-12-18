@@ -53,7 +53,13 @@ Resources for ROS are here: [ROS Technical Resources](https://github.com/quanser
 
 ## ❓ FAQ ❓
 
+Any technical questions should be posted on the [ROS Technical Resources](https://github.com/quanser/student-competition-resources-ros) tab of the ROS Technical Resources. This FAQ contains competition specific questions.
+
 For any competition related inquiries, please email: studentcompetition@quanser.com
+
+`How many team members is a team allowed?:` The minimum number of members is 1 students and 1 faculty advisor. There is no maximum number of teammates, but Quanser will only give QLabs access to the first 10 members.
+
+`Is there financial support provided to teams?:` In the past Quanser has applied to grants to help support teams to travel to the in-person event. DO NOT assume that this will be provided every year.
 
 ## 🗄️ Competition Resources 🗄️
 
