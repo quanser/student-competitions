@@ -26,6 +26,7 @@ During the **physical stage** of this competition, the objective will be to impl
 - **This competition's supported language is MATLAB/Simulink**.
 - There are currently delays with the technical resources. The new release date will be Dec 1.
 - The [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab) are now released!
+- The deadline for the submission of the [Virtual Video](#-competition-objective-) is JANUARY 29th! Teams must submit a video of their virtual performance according to [Virtual Submission Requirements](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md#virtual-stage-submission-requirements) and the [Software Requirements](#-software-requirements-).
 
 ## 🕙 Competition Structure and Timeline 🕙
 
@@ -37,7 +38,8 @@ Please see the below table for a timeline containing important dates. Keep in mi
 |:-------:  |:-----             | :--------                   |
 | Nov 18 | Registration Opens   | Registration Link: [SMiLE Hackathon Registration](https://forms.office.com/r/kqKBvcEJ8F) |
 | Dec 1 | Release of [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab)  | The MATLAB/Simulink technical resources will be released and students can begin development. |
-| Nov 24 - Feb 7 | Virtual Stage | Teams will gain access to QLabs where they will implement their self-driving algorithm on the virtual QCar 2. Teams will then submit a video showcasing their progress. |
+| Nov 24 - Jan 29 | Virtual Stage | Teams will gain access to QLabs where they will implement their self-driving algorithm on the virtual QCar 2. Teams will then submit a video showcasing their progress. |
+| Jan 29 | Virtual Stage Video Submission DEADLINE | Teams must submit a video of their virtual performance according to [Virtual Submission Requirements](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md#virtual-stage-submission-requirements) and the [Software Requirements](#-software-requirements-).
 | Feb 8-9 | In-person Workshop | Teams will come to a workshop at the SMiLE conference where they will port their algorithms to the physical QCar 2 with the help of a Quanser representative.|
 | Feb 10-11 | Physical Stage | Teams will compete live at the SMiLE conference! |
 

@@ -12,8 +12,6 @@ This document will cover the following:
 - [Running the Self-Driving Stack Resources](#running-the-self-driving-stack-resources)
 - [Learning the Self-Driving Stack](#learning-the-self-driving-stack)
 
-By the end of this document, you will have the following development environment set up:
-
 ## System Requirements
 
 `OS:` Windows 10 or 11
