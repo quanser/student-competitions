@@ -10,7 +10,7 @@ Below is a step-by-step sequence of events that are representative of what will 
 
     ![Taxi Hub Area](../Pictures/TaxiHubArea.png)
 
-2. Change the LED strip on the QCar to <span style="color: red;"> Red </span>.
+2. Change the LED strip on the QCar to <span style="color: magenta;"> Magenta </span>.
 
 3. Change the LEDs to <span style="color: green;"> Green </span> and navigate to the pick-up coordinate [0.125, 4.395] (meters):
 
@@ -24,7 +24,7 @@ Below is a step-by-step sequence of events that are representative of what will 
 
 6. Come to a full stop and change the LED strip to <span style="color: orange;"> orange</span> to indicate a passenger drop off.
 
-7. Navigate back to the Taxi Hub Area and change the LED strip to <span style="color: red;"> Red </span> to await another ride.
+7. Navigate back to the Taxi Hub Area and change the LED strip to <span style="color: magenta;"> Magenta </span> to await another ride.
 
 **END OF SCENARIO**
 

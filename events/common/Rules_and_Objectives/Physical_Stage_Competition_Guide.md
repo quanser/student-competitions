@@ -20,25 +20,23 @@ The last coordinate in a ride will always be the Drop Off location. Teams must i
 
 Any coordinates in a ride that aren’t the first and last coordinates will be a Stop. Teams must indicate a stop by changing the QCar 2 LED strip to <span style="color: red;"> Red </span> and come to a full stop at the stop location.
 
-When driving between coordinates, teams must change their LED strip to <span style="color: green;"> Green </span>.
-
 The sequence of a single ride will consist of the following:
 
-1. The QCar 2 will start in the Taxi Hub Area with <span style="color: red;"> Red </span> LEDs.
+1. The QCar 2 will start in the Taxi Hub Area with <span style="color: magenta;"> Magenta </span> LEDs.
 
 2. Teams will need to write down (or call out) the ride number they are attempting and show the judges.
 
-3. Once a team receives confirmation from the judges, they can begin the ride.
+3. Once a team receives confirmation from the judges, they can begin the ride and change their LEDs to <span style="color: green;"> Green </span>.
 
-4. Teams will need to navigate to the pickup location.
+4. Teams will navigate to the pickup location.
 
-5. Once the QCar 2 has arrived at the pickup location, it must change the onboard LED strip to <span style="color: blue;"> Blue </span> and come to a full stop.
+5. Once the QCar 2 has arrived at the pickup location and come to a full stop, it must change the onboard LED strip to <span style="color: blue;"> Blue </span>.
 
-6. If there are any stops in the ride, teams will need to navigate to the stop location, change the LED strip to <span style="color: red;"> Red</span>, and come to a full stop.
+6. If there are any stops in the ride, teams will need to navigate to the stop location and come to a full stop, then change the LED strip to <span style="color: red;"> Red</span>.
 
-7. For the final coordinate, teams will need to navigate to the drop off location, change the LED strip to <span style="color: orange;"> orange</span>, and come to a full stop.
+7. For the final coordinate, teams will need to navigate to the drop off location and come to a full stop, then change the LED strip to <span style="color: orange;"> orange</span>.
 
-8. Once the drop off has been completed, teams will need to navigate back to the Taxi Hub Area and change their LEDs to <span style="color: red;"> Red </span> to signal the end of the ride.
+8. Once the drop off has been completed, teams will need to navigate back to the Taxi Hub Area, come to a full stop and change their LEDs to <span style="color: magenta;"> Magenta </span> to signal the end of the ride.
 
 Once all the above steps have been completed, the judges will mark down the successful completion of a ride. The team will receive a preset dollar amount for the completion of the ride. The team will also receive a rating for the ride based on whether they followed traffic laws correctly. Infractions will lower the rating the team receives. Please refer to the Ratings section for details.
 

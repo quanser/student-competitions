@@ -5,27 +5,26 @@ There are many important things to keep in mind for the competition venue. This 
 This document contains the following topics:
 
 - [Competition Day Checklist](#competition-day-checklist)
-  - [Networking](#networking)
+- [Networking](#networking)
 - [Traffic Lights](#traffic-lights)
 
 ## Competition Day Checklist
 
 For the competition day, each team should ensure they have secured the following and can ship/bring it to the venue:
 
+- Visa's to the country of the competition
 - Travel to the venue
-- Accommodations to the venue
-- **Networking**
-  - **Router**
-  - **Network Switch**
-- Visa to the destination country (if applicable)
+- Accommodations at the venue
+- **Router**
+- **Network Switch**
 - Laptops to develop on
 - Portable monitors
 - Extension cords
 - Keyboards and Mice
 
-Additional items may be communicated to the teams!
+Additional items may be communicated to the teams, so keep an eye on the Announcement section of your competition page.
 
-### Networking
+## Networking
 
 Not every competition will have a reliable network that is available to connect you to your QCar. It is highly recommended that each team bring their own networking to communicate with their QCar. This will provide a more robust way of talking to the car that is more secure. For most teams the following will be enough:
 

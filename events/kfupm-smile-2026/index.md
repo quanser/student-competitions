@@ -15,6 +15,13 @@ This document contains the following:
 
 ## 🪧 Competition Objective 🪧
 
+List of Objectives and Rules Resources:
+
+- [Virtual Stage Objective](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md)
+- [Detailed Scenario](../common/Rules_and_Objectives/Virtual_Detailed_Scenario.md)
+- [Physical Stage Objective](../common/Rules_and_Objectives/Physical_Stage_Competition_Guide.md)
+- [Competition Day Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Day_Guide.md)
+
 During the **virtual stage** of this competition, the objective will be to create a video in QLabs that highlights your self-driving algorithm and readiness to compete live at the even. Please use the [Virtual Stage Competition Guide](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md) as a **detailed guide for the expectations**.
 
 During the **physical stage** of this competition, the objective will be to implement your self-driving algorithm on the physical QCar 2. **The specific task for your self-driving algorithm** is laid out in the [Physical Stage Competition Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Guide.md).
@@ -26,7 +33,8 @@ During the **physical stage** of this competition, the objective will be to impl
 - **This competition's supported language is MATLAB/Simulink**.
 - There are currently delays with the technical resources. The new release date will be Dec 1.
 - The [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab) are now released!
-- The deadline for the submission of the [Virtual Video](#-competition-objective-) is JANUARY 29th! Teams must submit a video of their virtual performance according to [Virtual Submission Requirements](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md#virtual-stage-submission-requirements) and the [Software Requirements](#-software-requirements-).
+- The <span style="color: red;"> DEADLINE for the submission of the [Virtual Video](#-competition-objective-) is JANUARY 29th! </span> Teams must submit a video of their virtual performance according to [Virtual Submission Requirements](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md#virtual-stage-submission-requirements) and the [Software Requirements](#-software-requirements-).
+- IMPORTANT: To prepare for the competition properly, a [Competition Day Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Day_Guide.md) has been provided containing everything you will need on the day of the in-person event
 
 ## 🕙 Competition Structure and Timeline 🕙
 
