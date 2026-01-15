@@ -2,7 +2,7 @@
 
 The detailed scenario is represented in [this video](https://youtu.be/NtgBwlfGbMc).
 
-Below is a step-by-step sequence of events that are representative of what will be tested during Stages 2 and 3 of the competition. It is still expected that teams communicate important aspects of their algorithm throughout their video submission.
+Below is a step-by-step sequence of events that are representative of what will be tested during Physical Stage of the competition. It is still expected that teams communicate important aspects of their algorithm throughout their video submission.
 
 ## Scenario
 

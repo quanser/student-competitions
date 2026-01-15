@@ -15,7 +15,14 @@ This document contains the following:
 
 ## 🪧 Competition Objective 🪧
 
-During the **virtual stage** of this competition, the objective will be to create a video in QLabs that highlights your self-driving algorithm and readiness to compete live at the even. Please use the [Virtual Stage Competition Guide](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md) as a **detailed guide for the expectations**.
+List of Objectives and Rules Resources:
+
+- [Virtual Stage Objective](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md)
+- [Detailed Scenario](../common/Rules_and_Objectives/Virtual_Detailed_Scenario.md)
+- [Physical Stage Objective](../common/Rules_and_Objectives/Physical_Stage_Competition_Guide.md)
+- [Competition Day Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Day_Guide.md)
+
+During the **virtual stage** of this competition, the objective will be to create a video in QLabs that highlights your self-driving algorithm and readiness to compete live at the event. Please use the [Virtual Stage Competition Guide](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md) as a **detailed guide for the expectations**.
 
 Finalists will be selected to move on to the physical stage of the competition based on the video submitted during the virtual stage of the competition.
 
@@ -27,6 +34,8 @@ During the **physical stage** of this competition, the objective will be to impl
 - Registration Now Live (11/18/2025): [ACC Registration](https://forms.office.com/pages/responsepage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BUOFJHQjRONDhYMEhHSUZEUlJJUFc1QlFZMS4u&route=shorturl)
 - There are currently delays with the technical resources. The new release date will be Dec 1.
 - The [ROS Technical Resources](https://github.com/quanser/student-competition-resources-ros) are now released!
+- IMPORTANT: To prepare for the competition properly, a [Competition Day Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Day_Guide.md) has been provided containing everything you will need on the day of the in-person event
+- From the 2025 ACC Competition the Czech Technical University in Prague submitted the following video and were invited to the Physical Stage of the competition. This video should be treated as a good example of what to show in your Virtual Stage Submission: [CVUT Virtual Stage Submission](https://www.youtube.com/watch?v=JXOI1RtLTbs)
 
 ## 🕙 Competition Structure and Timeline 🕙
 

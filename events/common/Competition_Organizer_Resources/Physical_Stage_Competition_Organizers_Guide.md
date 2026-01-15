@@ -36,7 +36,7 @@ A secondary goal is to ensure an the event is exciting and engaging for spectato
 
 Below is a list of the Quanser hardware needed for the competition:
 
-- 1 x QCar + Accessories (of the same generation) per team
+- 1 x QCar + Accessories (of the same generation) **PER TEAM**
   - Accessories include: batteries, battery charger
 - 1 x Large Quanser Roadmap for the competition rounds
 - 2 x Clear Gorilla Duct Tape for taping map together
@@ -50,13 +50,17 @@ Below is a list of the Quanser hardware needed for the competition:
 
 The following list contains additional hardware that may be necessary/useful:
 
+- 1 x Table **PER TEAM**
+- 3 x Tables (for the judges)
 - 1 x Ethernet Cable per Competition Organizer Laptop
+- 1 x Monitor **PER Competition Organizer**
 - 1 x Network Switch
 - 1 x Microphone
 - 10 x Extension Cords
 - 10 x Power Bars
 - 1 x Tape Measurer
-- 1 x TV + TV Stand for communicating to audience
+- 1 x TV + TV Stand
+- 1 x Projector + Projector Screen
 - 1 x Set of Infraction Flags for the Judge (yellow, red, black)
 - 1 x Roll of Masking Tape for making markings on the map
 
@@ -66,7 +70,7 @@ When Quanser runs the competition, there are generally 3 days available at the v
 
 |   **Day 1**   |     |        |
 | :------- |   :-----------:   |   :----------     |
-| Morning | Setup | Set up Quanser Roadmaps, judging tables, practice area, traffic lights, network, ect. |
+| Morning | Finalize Setup | Set up Quanser Roadmaps, judging tables, practice area, traffic lights, network, ect. |
 | Afternoon | Practice | Student teams now have access to practice on the roadmaps and they can ask the competition team questions. The practice is organized into time slots that teams sign up for. |
 
 | **Day 2** |   |   |
