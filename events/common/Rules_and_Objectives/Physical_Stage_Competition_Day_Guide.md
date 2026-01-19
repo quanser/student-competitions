@@ -33,6 +33,8 @@ Not every competition will have a reliable network that is available to connect 
 
 Teams in the past have had issue connecting to their QCar, which has resulted in poor performance during their run.
 
+For more information on connecting to the QCar, please refer to the [User Manual for Connectivity](https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/3_user_manuals/qcar2/user_manual_connectivity.pdf) from our Academic Resources.
+
 ## Traffic Lights
 
 The competition organizers may give teams access to traffic lights to test their algorithms with. The documentation for how to interface with the traffic lights can be read from the Quanser Academic Resources in the following links:

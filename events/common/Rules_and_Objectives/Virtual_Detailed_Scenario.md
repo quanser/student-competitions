@@ -6,7 +6,7 @@ Below is a step-by-step sequence of events that are representative of what will 
 
 ## Scenario
 
-1. Run the [Setup_Real_Scenario.py](../Virtual_ROS_Resources/env_setup/docker_resources/quanser_docker/python/Base_Scenarios_Python/Setup_Real_Scenario.py) file. This will spawn the QCar 2 in the Taxi Hub Area:
+1. Run the `Setup_Competition_Map (.py/.m)` file. This will spawn the QCar 2 in the Taxi Hub Area:
 
     ![Taxi Hub Area](../Pictures/TaxiHubArea.png)
 

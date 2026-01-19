@@ -6,7 +6,7 @@ This repo contains all the resources available for the Quanser MATLAB-based comp
 
 [Student Competition Webpages](https://quanser.github.io/student-competitions/): Contains competition specific details and the rules & objectives for each competition.
 
-[Virtual MATLAB Software Setup Guide](./Virtual_MATLAB_Resources/Virtual_MATLAB_Software_Setup_with_QUARC.md): Contains the instructions and requirements to set up your computer to utilize the Quanser Resources. **START HERE IF LOST**.
+[Virtual MATLAB Software Setup Guide](./Virtual_MATLAB_Resources/Virtual_MATLAB_Software_Setup.md): Contains the instructions and requirements to set up your computer to utilize the Quanser Resources. **START HERE IF LOST**.
 
 [Virtual MATLAB Development Guide](./Virtual_MATLAB_Resources/Virtual_MATLAB_Development_Guide.md): Contains important details about how the self-driving stack resources are meant to be used.
 
@@ -16,7 +16,7 @@ This repo contains all the resources available for the Quanser MATLAB-based comp
 
 ## ❓ FAQ ❓
 
-Some common issues are listed on this Github's FAQ Page: [MATLAB FAQ](../common/Virtual_MATLAB_Resources/MATLAB_FAQ.md)
+Some common issues are listed on this Github's FAQ Page: [MATLAB FAQ](./Virtual_MATLAB_Resources/MATLAB_FAQ.md)
 
 For any bugs in the released resources, please post an issue in the [Github Issues](https://github.com/quanser/student-competition-resources-matlab/issues)
 

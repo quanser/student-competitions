@@ -34,18 +34,20 @@
 <p>This document will cover the following:</p>
 <ul>
 <li><a href="#background-context">Background Context</a></li>
-<li><a href="#conversion-guide">Conversion Guide</a></li>
+<li><a href="#io-conversion-guide">I/O Conversion Guide</a></li>
 <li><a href="#quick-conversion-table">Quick Conversion Table</a></li>
 <li><a href="#hil-initialize">HIL Initialize</a></li>
 <li><a href="#ranging-sensor">Ranging Sensor</a></li>
 <li><a href="#video3d-initialize">Video3D Initialize</a></li>
 <li><a href="#video-capture">Video Capture</a></li>
 <li><a href="#led-strip">LED Strip</a></li>
+<li><a href="#switching-the-quarc-target">Switching the QUARC Target</a></li>
 </ul>
 <h2 id="background-context">Background Context</h2>
 <p>If you have followed the <a href="./Virtual_MATLAB_Software_Setup.html">Virtual MATLAB Software Setup Guide</a>, then the self-driving stack that you are developing on is configured to access virtual hardware. This is done using a special Device Identifier or URI in the <code>HIL Initialize</code>, <code>Ranging Sensor</code>, <code>Video3D Initialize</code>, <code>LED Strip</code>, and <code>Video Capture</code>. The Device Identifier or the URI contains a TCP port that communicates with QLabs to get the simulated sensor's data.</p>
 <p>When converting your Simulink model from virtual to physical, you will need to change these Device Identifiers and URIs to point to the hardware instead of the virtual sensors.</p>
-<h2 id="conversion-guide">Conversion Guide</h2>
+<p>You will also need to switch the target of the generated code from your Windows machine to the QCar 2, which is an Nvidia AGX Orin target. This will be addressed below.</p>
+<h2 id="io-conversion-guide">I/O Conversion Guide</h2>
 <p>Below contains a list of the blocks that will need to be changed and what to change within the block settings.</p>
 <h3 id="quick-conversion-table">Quick Conversion Table</h3>
 <p>This table contains the parameters you need to change, but the subsequent subsections contain screenshots.</p>
@@ -130,6 +132,7 @@
 <h3 id="led-strip">LED Strip</h3>
 <p>Change <code>URI</code> from <code>tcpip://localhost:18969</code> to <code>spi://localhost:1?word='8',baud='3333333',lsb='off',memsize='420',frame='1'</code>:</p>
 <p><img alt="v2p led strip" src="../Pictures/v2p_ledStrip_01.png"/></p>
+<h2 id="switching-the-quarc-target">Switching the QUARC Target</h2>
         </main>
 
         <footer class="site-footer">
