@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Virtual Stage ROS Software Setup</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../../../assets/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="header-left">
+                    
+                </div>
+
+                <div class="header-middle">
+                    <h1>Quanser Student Competitions</h1>
+                </div>
+
+                <div class="header-right">
+                    <img src="../../../assets/logos/full colour_dark background_tagline.png" alt="Quanser Student Competitions logo" class="site-logo">
+                </div>
+            </div>
+            <div class="header-banner">
+                <img src="../../../assets/banners/quanser_banner.jpg" alt="Competition banner" class="header-banner-img">
+            </div>
+        </header>
+
+        <main class="content">
+            <h1 id="virtual-stage-ros-software-setup">Virtual Stage ROS Software Setup <!-- omit in toc --></h1>
+<p>Please go through the following steps to set up a computer with the Quanser Virtual Development Environment.</p>
+<h2 id="description">Description <!-- omit in toc --></h2>
+<p>This document describes:</p>
+<ul>
+<li><a href="#system-requirements">System Requirements</a></li>
+<li><a href="#downloading-the-ros-competition-resources">Downloading the ROS Competition Resources</a></li>
+<li><a href="#setting-up-the-isaac-ros-development-container">Setting Up the Isaac-ROS (Development) Container</a></li>
+<li><a href="#how-to-run-the-ros2-humble-nodes-with-the-isaac-ros-container">How to Run the ROS2 Humble Nodes with the Isaac-ROS Container</a></li>
+<li><a href="#running-nav2">Running Nav2</a></li>
+</ul>
+<p>By the end of this document, you will have a QCar that is setup to run Nav2 using the Isaac-ROS (Development) container in the below software architecture:</p>
+<p><img alt="Physical Software ROS Setup" src="../Pictures/software_architecture_physical_stage.png"/></p>
+<h2 id="system-requirements">System Requirements</h2>
+<p><code>Hardware Requirements:</code></p>
+<ul>
+<li>QCar 2</li>
+</ul>
+<p><code>Software Warning:</code></p>
+<p>If you plan on changing any native packages on the QCar 2, consult the Software sections at the bottom of the following page: <a href="https://docs.quanser.com/quarc/documentation/qcar2.html">QCar 2 QUARC Documentation</a></p>
+<p><code>Docker Check:</code></p>
+<p>Docker should be installed by default on the QCar 2. Please check that it is by running the following command:</p>
+<pre><code class="language-bash">docker run hello-world
+</code></pre>
+<p>Make sure your QCar 2 is connected to the internet. You should see a <code>Hello from Docker</code> somewhere in the output. If this does not work, please raise an issue on the Github.</p>
+<p>To remove this container use the following commands:</p>
+<pre><code class="language-bash">docker ps -a
+docker rm &lt;CONTAINER ID of hello-world&gt;
+</code></pre>
+<h2 id="downloading-the-ros-competition-resources">Downloading the ROS Competition Resources</h2>
+<p>The below instructions are inteded to be run on the QCar:</p>
+<ol>
+<li>
+<p>Download the <a href="https://github.com/quanser/student-competition-resources-ros/blob/main/Virtual_ROS_Resources/env_setup/setup_qcar2.py">setup_qcar2.py</a> file</p>
+<p><img alt="manual download of setup_qcar2.py" src="../pictures/github_manually_downloading_setup_qcar2.png"/></p>
+</li>
+<li>
+<p>Run the <code>setup_qcar2.py</code> file from the downloads folder</p>
+</li>
+</ol>
+<p>After running the file, the QCar should have the following folder structure:</p>
+<pre><code class="language-bash">/home/$USER/Documents/ACC_Development/ 
+                        L Development/
+                        L isaac_ros_common/
+                        L docker/
+                        L backup/
+</code></pre>
+<h2 id="setting-up-the-isaac-ros-development-container">Setting Up the Isaac-ROS (Development) Container</h2>
+<p>For developing your ROS solution Isaac-ROS container is utilized. This container will communicate with the ROS-Humble nodes running natively on the QCar. Please follow the below steps to set the container up correctly:</p>
+<p>Note: Isaac ROS is already installed on the QCar 2. You will only need to install the Nvidia Container Toolkit.</p>
+<ol>
+<li>
+<p>To get started please install <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-the-nvidia-container-toolkit">Nvidia-Container-toolkit</a> using their instructions</p>
+<p><strong><em>NOTE:</em></strong>  Make sure you install the <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#with-apt-ubuntu-debian">Debian-based installation for the toolkit</a>. And, do not set up the experimental packages repo.</p>
+<p>During the installation of the <code>nvidia-container-toolkit</code> you may receive an error that the <code>nvidia-container-toolkit-base</code> package is missing. Please install it manually using the following command:</p>
+<p><code>bash
+sudo apt install nvidia-container-toolkit-base</code></p>
+</li>
+<li>
+<p><a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker">Configure Your Docker</a>. You can ignore the Rootless Mode instructions.</p>
+<p><strong><em>NOTE:</em></strong>  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.</p>
+</li>
+</ol>
+<h2 id="how-to-run-the-ros2-humble-nodes-with-the-isaac-ros-container">How to Run the ROS2 Humble Nodes with the Isaac-ROS Container</h2>
+<p>Follow the below steps to run the ROS2 Humble Nodes natively on the QCar 2 and have the Isaac-ROS container running RViz to visualize some topics.</p>
+<ol>
+<li>
+<p>Open a terminal and source ROS2 Humble in the native OS:</p>
+<p><code>bash
+source /opt/ros/humble/setup.bash</code></p>
+</li>
+<li>
+<p>Transfer the ROS nodes and interfaces into the ros2 directory:</p>
+<p><code>bash
+cp -r -u /home/$USER/Documents/ACC_Development/Development/ros2/src /home/$USER/ros2</code></p>
+</li>
+<li>
+<p>Make sure Python 3.8 is being used to build the nodes:</p>
+<p><code>bash
+PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.8/dist-packages</code></p>
+</li>
+<li>
+<p>Navigate to the ros2 folder and build the nodes:</p>
+<p><code>bash
+cd /home/$USER/ros2
+colcon build</code></p>
+<p>There may be some warnings, but these can be ignored.</p>
+</li>
+<li>
+<p>Copy the compiled ROS nodes and interfaces to the container so that the Isaac-ros container has access to the messages the QCar nodes are using:</p>
+<p><code>bash
+cp -r ~/ros2/install/ ~/Documents/ACC_Development/Development</code></p>
+</li>
+<li>
+<p>Source the recently compiled ROS packages:</p>
+<p><code>bash
+source install/setup.bash</code></p>
+</li>
+<li>
+<p>Run the nodes using the following command:</p>
+<p><code>bash
+ros2 launch qcar2_nodes qcar2_launch.py</code></p>
+</li>
+</ol>
+<hr/>
+<p><strong>&lt;-----From this point forward you will be operating in the Isaac-ROS Container----&gt;</strong></p>
+<hr/>
+<ol>
+<li>
+<p>Open an Isaac-ROS container in a NEW terminal using the following commands:</p>
+<p><code>bash
+cd /home/$USER/Documents/ACC_Development/isaac_ros_common
+./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development</code></p>
+<p>Note: To open additional terminals, run the above 2 commands in a new terminal.</p>
+</li>
+<li>
+<p>Source ROS</p>
+<p><code>bash
+source install/setup.bash</code></p>
+</li>
+<li>
+<p>Open RViz2:</p>
+<p><code>bash
+rviz2</code></p>
+</li>
+<li>
+<p>Add 'By Topic' relevant topics such as <code>/laserscan</code>. For <code>/laserscan</code>, switch the Fixed frame in Global options to <code>base_scan</code> by typing it in.</p>
+</li>
+</ol>
+<h2 id="running-nav2">Running Nav2</h2>
+<p>The following steps will assume you have 1 terminal connected to the Isaac-ROS container (Development Terminal) and 1 regular terminal (Native Terminal) that has sourced ROS Humble and the built packages:</p>
+<ol>
+<li>
+<p>Run the Nav2 launch file in the Native Terminal.</p>
+<p><code>bash
+source /opt/ros/humble/setup.bash
+cd /home/$USER/ros2
+source install/setup.bash
+ros2 launch qcar2_nodes qcar2_slam_and_nav_bringup_launch.py</code></p>
+</li>
+</ol>
+<p>Now the Development Terminal will be used.</p>
+<pre><code class="language-bash">cd /home/$USER/Documents/ACC_Development/isaac_ros_common
+./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development
+</code></pre>
+<ol>
+<li>
+<p>Source ROS</p>
+<p><code>bash
+source install/setup.bash</code></p>
+</li>
+<li>
+<p>Open <code>rviz2</code> in the Development Terminal.</p>
+<p><code>bash
+rviz2</code></p>
+</li>
+<li>
+<p>Switch the Fixed frame in Global options to <code>base_scan</code> by typing it in. </p>
+</li>
+<li>
+<p>Add the following topics to the Display. Click on <code>add</code> in the bottom left of <code>rviz2</code>.</p>
+<ul>
+<li><code>TF</code> will be under <code>By display type</code>.</li>
+<li><code>LaserScan</code> and <code>Map</code> will be under <code>By topic</code>.</li>
+</ul>
+<p><code>bash
+Display
+    L TF
+    L LaserScan
+    L Map</code></p>
+<p><img alt="Rviz2PictureofAddingTopicstoDisplay" src="../Pictures/rviz2AddingTopics.png"/></p>
+</li>
+<li>
+<p>In <code>rviz2</code> select the <code>2D Goal Pose</code>.</p>
+<p><img alt="Selecting2DGoalPose" src="../Pictures/rviz2SetPoseButton.png"/></p>
+</li>
+<li>
+<p>Click and drag within the gridded area to set the goal pose and orientation. A green arrow should appear and show your selection.</p>
+</li>
+</ol>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Quanser. All Rights Reserved. </p>
+        </footer>
+    </body>
+</html>

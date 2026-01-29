@@ -33,23 +33,34 @@
 <h2 id="description">Description <!-- omit in toc --></h2>
 <p>This document will cover the following:</p>
 <ul>
-<li><a href="#background-context">Background Context</a></li>
+<li><a href="#steps-for-virtual-to-physical-conversion">Steps for Virtual to Physical Conversion</a></li>
 <li><a href="#io-conversion-guide">I/O Conversion Guide</a></li>
-<li><a href="#quick-conversion-table">Quick Conversion Table</a></li>
+<li><a href="#quick-io-conversion-table">Quick I/O Conversion Table</a></li>
 <li><a href="#hil-initialize">HIL Initialize</a></li>
+<li><a href="#hil-read-timebase">HIL Read Timebase</a></li>
 <li><a href="#ranging-sensor">Ranging Sensor</a></li>
 <li><a href="#video3d-initialize">Video3D Initialize</a></li>
 <li><a href="#video-capture">Video Capture</a></li>
 <li><a href="#led-strip">LED Strip</a></li>
 <li><a href="#switching-the-quarc-target">Switching the QUARC Target</a></li>
+<li><a href="#switching-the-qcar2_paramsm-file">Switching the QCar2_Params.m file</a></li>
+<li><a href="#background-context">Background Context</a></li>
 </ul>
-<h2 id="background-context">Background Context</h2>
-<p>If you have followed the <a href="./Virtual_MATLAB_Software_Setup.html">Virtual MATLAB Software Setup Guide</a>, then the self-driving stack that you are developing on is configured to access virtual hardware. This is done using a special Device Identifier or URI in the <code>HIL Initialize</code>, <code>Ranging Sensor</code>, <code>Video3D Initialize</code>, <code>LED Strip</code>, and <code>Video Capture</code>. The Device Identifier or the URI contains a TCP port that communicates with QLabs to get the simulated sensor's data.</p>
-<p>When converting your Simulink model from virtual to physical, you will need to change these Device Identifiers and URIs to point to the hardware instead of the virtual sensors.</p>
-<p>You will also need to switch the target of the generated code from your Windows machine to the QCar 2, which is an Nvidia AGX Orin target. This will be addressed below.</p>
+<p>The Simulink models configured for using a physical QCar 2 are provided as:</p>
+<ul>
+<li><a href="./self_driving_stack_resources/PHYSICAL_self_driving_stack.slx">PHYSICAL_self_driving_stack.slx</a></li>
+<li><a href="./self_driving_stack_resources/QCar2_Physical_calibrate.slx">QCar2_Physical_calibrate.slx</a></li>
+</ul>
+<h2 id="steps-for-virtual-to-physical-conversion">Steps for Virtual to Physical Conversion</h2>
+<p>Perform the following 3 steps to convert your Simulink model:</p>
+<ol>
+<li>Go through the <a href="#io-conversion-guide">I/O Conversion Guide</a> and ensure certain Simulink blocks have been modified correctly</li>
+<li>Change the <a href="#switching-the-quarc-target">QUARC Target and IP Address</a></li>
+<li>Switch <a href="#switching-the-qcar2_paramsm-file"><code>qcar_types</code> the <code>QCar2_Params.m</code> file</a></li>
+</ol>
 <h2 id="io-conversion-guide">I/O Conversion Guide</h2>
 <p>Below contains a list of the blocks that will need to be changed and what to change within the block settings.</p>
-<h3 id="quick-conversion-table">Quick Conversion Table</h3>
+<h3 id="quick-io-conversion-table">Quick I/O Conversion Table</h3>
 <p>This table contains the parameters you need to change, but the subsequent subsections contain screenshots.</p>
 <table>
 <thead>
@@ -66,6 +77,12 @@
 <td style="text-align: center;">Board identifier</td>
 <td style="text-align: center;">0@tcpip://localhost:18960</td>
 <td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HIL Read Timebase</td>
+<td style="text-align: center;">(Advanced tab) Buffer overflow mode</td>
+<td style="text-align: center;">Synchronize (for simulated cards only)</td>
+<td style="text-align: center;">Error on overflow</td>
 </tr>
 <tr>
 <td style="text-align: left;">Ranging Sensor</td>
@@ -114,6 +131,9 @@
 <h3 id="hil-initialize">HIL Initialize</h3>
 <p>Change <code>Board identifier</code> from <code>0@tcpip://localhost:18960</code> to <code>0</code>:</p>
 <p><img alt="v2p hil initialize" src="../Pictures/v2p_hilInitialize_01.png"/></p>
+<h3 id="hil-read-timebase">HIL Read Timebase</h3>
+<p>Change the <code>Buffer overflow mode</code> from <code>Synchronize (for simulated cards only)</code> to <code>Error on Overflow</code>:</p>
+<p><img alt="v2p hil read timebase" src="../Pictures/v2p_hilReadTimebase.png"/></p>
 <h3 id="ranging-sensor">Ranging Sensor</h3>
 <p>Change <code>URI</code> from <code>tcpip://localhost:18966</code> to <code>serial-cpu://localhost:1?baud='256000',word='8',parity='none',stop='1',flow='none',dsr='on'</code></p>
 <p><img alt="v2p ranging sensor block" src="../Pictures/v2p_rangingSensor_01.png"/></p>
@@ -121,7 +141,7 @@
 <p>Change <code>Device identifier</code> from <code>0@tcpip://localhost:18965</code> to <code>0</code>:</p>
 <p><img alt="v2p video 3D initialize" src="../Pictures/v2p_video3DInitialize_01.png"/></p>
 <h3 id="video-capture">Video Capture</h3>
-<p>The following are the conversions needed for each CSI Camera:</p>
+<p>The following are the conversion is needed for each CSI Camera:</p>
 <ul>
 <li>Change <code>0@tcpip://localhost:18961</code> to <code>0</code> (Right)</li>
 <li>Change <code>1@tcpip://localhost:18962</code> to <code>1</code> (Rear)</li>
@@ -135,9 +155,18 @@
 <h2 id="switching-the-quarc-target">Switching the QUARC Target</h2>
 <p>Change the target from a Windows Target (used for QLabs) to the QCar 2 target. To do this select the <code>QUARC Tab</code> in Simulink, then the <code>QUARC Targets</code> drop down menu, then the <code>quarc_linux_qcar2.tlc</code> target:</p>
 <p><img alt="select quarc qcar2 target" src="../Pictures/v2p_set_QUARC_target.png"/></p>
-<p>Change the ip address to the ip address displayed on the QCar:</p>
+<p>Change the ip address to the ip address displayed on the QCar and use port.</p>
+<p>Example: add to MEX-file arguments <code>,'tcpip://192.168.55.1:17001'</code></p>
 <p><img alt="change ip address for qcar" src="../Pictures/v2p_set_ip_address.png"/></p>
 <p>If you do not have an ip address on the LCD of the QCar, please refer to the <a href="https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/3_user_manuals/qcar2/user_manual_connectivity.pdf">User Manual for Connectivity</a>.</p>
+<h2 id="switching-the-qcar2_paramsm-file">Switching the QCar2_Params.m file</h2>
+<p>Within the Qcar2_Params.m file change the <code>qcar_types</code> variable from 1 (for virtual) to 2 (for physical).</p>
+<p><img alt="v2p change qcar2  params file" src="../Pictures/v2p_changeQcarTypesVariable.png"/></p>
+<p>This will modify some of the lidar offsets so that the lidar aligns with the map and qcar body frames.</p>
+<h2 id="background-context">Background Context</h2>
+<p>If you have followed the <a href="./Virtual_MATLAB_Software_Setup.html">Virtual MATLAB Software Setup Guide</a>, then the self-driving stack that you are developing on is configured to access virtual hardware. This is done using a special Device Identifier or URI in the <code>HIL Initialize</code>, <code>Ranging Sensor</code>, <code>Video3D Initialize</code>, <code>LED Strip</code>, and <code>Video Capture</code>. The Device Identifier or the URI contains a TCP port that communicates with QLabs to send and receive data from the simulated QCar DAC.</p>
+<p>When converting your Simulink model from virtual to physical, you will need to change these Device Identifiers and URIs to point to the hardware instead of the virtual sensors/actuators.</p>
+<p>You will also need to switch the target of the generated code from your Windows machine to the QCar 2, which is an Nvidia AGX Orin target. This will be addressed below.</p>
         </main>
 
         <footer class="site-footer">
