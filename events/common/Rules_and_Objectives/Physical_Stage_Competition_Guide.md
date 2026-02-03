@@ -14,6 +14,13 @@ This document contains the following topics:
 
 The objective of the competition will be to maximize the amount of money earned by completing taxi rides within a certain amount of time. All teams will be given a file that contains coordinates and ride details on the day of the competition. Rides can have multiple stops, which will add complexity. Teams will earn more money for more complex rides.
 
+Conventions:
+- Right-hand traffic only
+- The taxi hub area is a one way street in the +x direction
+
+Below is a detailed description of a ride:
+___________
+
 The first coordinate in a ride will always be the Pickup location. Teams must indicate a pickup by changing the QCar 2 LED strip to <span style="color: blue;"> Blue </span> and come to a full stop at the pick up.
 
 The last coordinate in a ride will always be the Drop Off location. Teams must indicate a drop off by changing the QCar 2 LED strip to <span style="color: orange;"> Orange </span> and come to a full stop at the drop off location.
@@ -63,7 +70,8 @@ Ratings will be given after every ride completion. The ride rating will be out o
 | Failure to yield | Fails to yield at a yield sign when the car doesn’t have the right of way | 2 |
 | Incorrect QCar 2 LED Strip colour (per infraction) | Fails to change QCar 2 LED strip to the correct colours laid out in the Stage 3 Objective section | 1 |
 | Failure to stop in the correct area for a pick-up, stop, or drop-off | A mark zone will show where the stopping locations are for a pick-up, stop, and drop-off. Failure to stop within that zone is a penalty | 1 |
-| | | |
+
+_________
 
 **Disclaimer**: This list contains the most likely infractions, but this list could be added to in the future or during the competition. The judges will notify teams if there is an addition to the list during the competition.
 

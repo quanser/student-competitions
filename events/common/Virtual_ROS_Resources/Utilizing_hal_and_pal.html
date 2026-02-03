@@ -37,6 +37,7 @@
 <ul>
 <li><a href="#location-of-libraries">Location of Libraries</a></li>
 <li><a href="#examples-using-halpal">Examples using <code>hal/pal</code></a></li>
+<li><a href="#best-practices-for-a-python-only-setup">Best Practices for a Python only Setup</a></li>
 </ul>
 <h2 id="location-of-libraries">Location of Libraries</h2>
 <p><code>hal/pal</code> are downloaded as part of the ACC_Resources. They are stored within:</p>
@@ -54,6 +55,23 @@
 <pre><code class="language-bash">cd /workspaces/isaac_ros-dev/python_dev
 </code></pre>
 <p>There are basic hardware tests that showcase how to interface with the QCar 2.</p>
+<h2 id="best-practices-for-a-python-only-setup">Best Practices for a Python only Setup</h2>
+<p>We understand that some of our participants are choosing to stick to a Python only setup. It is important that these users understand that damaging the native Python installation can lead to a bricked QCar 2 that can only be fixed by sending it back to Quanser. To avoid this, always check the following software list for conflicts before installing packages: <a href="https://docs.quanser.com/quarc/documentation/qcar2.html">QCar2 QUARC Documentation</a>.</p>
+<p>We also recommend that you work inside a virtual environment. Please use the following to create a <code>venv</code> for Python:</p>
+<ol>
+<li>
+<p>Install the debian version of venv:</p>
+<p><code>bash
+sudo apt install python3.8-venv</code></p>
+</li>
+<li>
+<p>Create the virtual environment and give it access to the system packages so that the Quanser Python API can be used:</p>
+<p><code>bash
+python3.8 -m venv --system-site-packages .</code></p>
+</li>
+</ol>
+<p>The command <code>deactivate</code> will exit the virtual environment when you are inside of it and to reactivate the environment, <code>source /path_to_venv/bin/activate</code>.</p>
+<p>It is important to keep track of the Python packages that you have installed so that you can recreate the venv if you break things.</p>
         </main>
 
         <footer class="site-footer">

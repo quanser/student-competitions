@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Physical ROS Development Guide</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="../../../assets/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="header-left">
+                    
+                </div>
+
+                <div class="header-middle">
+                    <h1>Quanser Student Competitions</h1>
+                </div>
+
+                <div class="header-right">
+                    <img src="../../../assets/logos/full colour_dark background_tagline.png" alt="Quanser Student Competitions logo" class="site-logo">
+                </div>
+            </div>
+            <div class="header-banner">
+                <img src="../../../assets/banners/quanser_banner.jpg" alt="Competition banner" class="header-banner-img">
+            </div>
+        </header>
+
+        <main class="content">
+            <h1 id="physical-ros-development-guide">Physical ROS Development Guide <!-- omit in toc --></h1>
+<p>This document will show the architecture of the ROS software on the physical QCar 2 and describes the intended development pipeline for utilizing the Isaac-ROS container and the native ROS Humble installation.</p>
+<ul>
+<li><a href="#qcar2-ros-software-architecture">QCar2 ROS Software Architecture</a></li>
+<li><a href="#how-to-transfer-the-virtual-isaac-ros-container-to-the-physical-system">How to Transfer the Virtual Isaac-ROS Container to the Physical System</a></li>
+<li><a href="#how-to-create-permanent-files-in-the-isaac-ros-container">How to create permanent files in the Isaac-ROS Container</a></li>
+<li><a href="#how-to-add-packages-via-apt-that-persist-in-the-isaac-ros-container">How to add packages via <code>apt</code> that persist in the Isaac-ROS container</a></li>
+<li><a href="#how-to-add-python-packages-via-pip3-that-persist-in-the-isaac-ros-container">How to add Python packages via <code>pip3</code> that persist in the Isaac-ROS container</a></li>
+<li><a href="#how-to-run-the-isaac-ros-container-with-no-internet-connection">How to Run the Isaac-ROS Container with No Internet Connection</a></li>
+</ul>
+<h2 id="qcar2-ros-software-architecture">QCar2 ROS Software Architecture</h2>
+<p>On the physical QCar 2, the native ROS installation will be used to run the QCar 2 nodes, while all the development will take place within the Isaac-ROS container. It is intended that you do not modify the native ROS2 nodes and instead only add/change packages in the Isaac-ROS container. This is to ensure safe development.</p>
+<p><img alt="Development Structure" src="../Pictures/software_architecture_physical_stage.png"/></p>
+<p><strong>WARNING:</strong></p>
+<p>Updating packages in the native Ubuntu OS on the QCar 2 can damage the QCar 2 software irrepairably. Before updating any packages consult the Software section of the following webpage: <a href="https://docs.quanser.com/quarc/documentation/qcar2.html">QCar2 QUARC Documentation</a>.</p>
+<h2 id="how-to-transfer-the-virtual-isaac-ros-container-to-the-physical-system">How to Transfer the Virtual Isaac-ROS Container to the Physical System</h2>
+<p>Any files that were stored within the <code>/home/$USER/Documents/ACC_Development/Development</code> folder in the Virtual Stage should be saved and transferred over to the same folder on the QCar 2. These will still get pulled into the Isaac-ROS Container when the container is launched.</p>
+<p>Any Debian or Python packages you installed on the Isaac-ROS container through <code>Dockerfile.quanser</code> in the Virtual Stage must be transferred over to the <code>Dockerfile.student</code>.</p>
+<h2 id="how-to-create-permanent-files-in-the-isaac-ros-container">How to create permanent files in the Isaac-ROS Container</h2>
+<p>Any files placed within the <code>/home/$USER/Documents/ACC_Development/Development</code> folder will be pulled into the container when the Isaac-ROS Container is launched and will persist after the container is closed. Keep all development files within this container.</p>
+<h2 id="how-to-add-packages-via-apt-that-persist-in-the-isaac-ros-container">How to add packages via <code>apt</code> that persist in the Isaac-ROS container</h2>
+<p>Any packages that get installed via <code>apt</code> in the command line of the Isaac-ROS Container do not persist once the container is closed. When you are installing packages in the terminal, make sure to record those packages in <code>Dockerfile.student</code>. This Docker file is used to configure the Isaac-ROS container and can be found in the following folder:</p>
+<pre><code class="language-bash">cd /home/$USER/Documents/ACC_Development/docker/development_docker/quanser_dev_docker_files
+</code></pre>
+<p>At the bottom of the <code>Dockerfile.student</code> add your Debian packages as shown below:</p>
+<pre><code class="language-bash"># Install Debian packages
+RUN apt-get update &amp;&amp; apt-get install -y \
+    python3-pyqtgraph \
+    &amp;&amp; rm -rf /var/lib/apt/lists/*
+</code></pre>
+<p>This example will install pytransform3d and pyqtgraph everytime the container is started. <strong>As you develop in the Development Container</strong>, make sure you record any packages installed via <code>apt</code> in the Docker file mentioned above.</p>
+<p><strong>IMPORTANT:</strong> If you run the <code>setup_qcar2.py</code> file again, this will create a new ACC_Development folder and record a backup of your previous one. Make sure to copy any changes made to <code>Dockerfile.student</code>.</p>
+<h2 id="how-to-add-python-packages-via-pip3-that-persist-in-the-isaac-ros-container">How to add Python packages via <code>pip3</code> that persist in the Isaac-ROS container</h2>
+<p><strong>NOTE</strong>: We recommend you use the Debian packages if they are available.</p>
+<p>Any packages that get installed via <code>pip3</code> in the command line of the Isaac-ROS Container do not persist once the container is closed. When you are installing packages in the terminal, make sure to record those packages in <code>Dockerfile.student</code>. This Docker file is used to configure the Isaac-ROS container and can be found in the following folder:</p>
+<pre><code class="language-bash">cd /home/$USER/Documents/ACC_Development/docker/isaac_ros
+</code></pre>
+<p>At the bottom of the <code>Dockerfile.student</code> add your Python packages as shown below:</p>
+<pre><code class="language-bash"># Install Python Packages if necessary
+RUN pip3 install -U \
+    pytransform3d \
+    pyqtgraph
+</code></pre>
+<p>This example will install pytransform3d and pyqtgraph everytime the container is started. <strong>As you develop in the Isaac-ROS Container</strong>, make sure you record any packages installed via <code>pip3</code> in the Docker file mentioned above.</p>
+<p><strong>IMPORTANT:</strong> If you run the <code>setup_qcar2.py</code> file again, this will create a new ACC_Development folder and record a backup of your previous one. Make sure to copy any changes made to <code>Dockerfile.student</code>.</p>
+<h2 id="how-to-run-the-isaac-ros-container-with-no-internet-connection">How to Run the Isaac-ROS Container with No Internet Connection</h2>
+<p>When you run the Isaac-ROS container with the script <code>run_dev.sh</code> this will check if there is an updated version of the Base Isaac-ROS container. This requires an internet connection.</p>
+<p>To run the Isaac-ROS container with no internet connection, use the commands:</p>
+<pre><code class="language-bash">cd /home/$USER/Documents/ACC_Development/isaac_ros_common
+chmod a+x ./scripts/run_local_dev.sh
+./scripts/run_local_dev.sh  /home/$USER/Documents/ACC_Development/dev
+</code></pre>
+<p>These commands will pull on the locally built Docker image and not check online for an updated one.</p>
+<p>Note: Once you have changed <code>run_local_dev.sh</code> to an executable file, you don't need to run the chmod command again.</p>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Quanser. All Rights Reserved. </p>
+        </footer>
+    </body>
+</html>
