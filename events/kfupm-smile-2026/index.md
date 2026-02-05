@@ -37,6 +37,7 @@ During the **physical stage** of this competition, the objective will be to impl
 - IMPORTANT: To prepare for the competition properly, a [Competition Day Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Day_Guide.md) has been provided containing everything you will need on the day of the in-person event
 - From the 2025 ACC Competition the Czech Technical University in Prague submitted the following video and were invited to the Physical Stage of the competition. This video should be treated as a good example of what to show in your Virtual Stage Submission: [CVUT Virtual Stage Submission](https://www.youtube.com/watch?v=JXOI1RtLTbs)
 - A scenario containing traffic controls has been uploaded [`Setup_Real_Scenario.m`](../common/Virtual_MATLAB_Resources/self_driving_stack_resources/Setup_Real_Scenario.m)
+- The official ride list is provided at [Official Ride List](https://quanser.github.io/student-competitions/events/kfupm-smile-2026/kfupm_official_rides_list.txt) as well as a [Ride List Visualization](https://quanser.github.io/student-competitions/events/kfupm-smile-2026/KFUPM_RIDE_VISUALIZATION.pdf)
 
 ## 🕙 Competition Structure and Timeline 🕙
 

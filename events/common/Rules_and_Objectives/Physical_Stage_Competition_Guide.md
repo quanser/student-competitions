@@ -15,8 +15,8 @@ This document contains the following topics:
 The objective of the competition will be to maximize the amount of money earned by completing taxi rides within a certain amount of time. All teams will be given a file that contains coordinates and ride details on the day of the competition. Rides can have multiple stops, which will add complexity. Teams will earn more money for more complex rides.
 
 Conventions:
-- Right-hand traffic only
-- The taxi hub area is a one way street in the +x direction
+1. Right-hand traffic only
+2. The taxi hub area is a one way street in the +x direction
 
 Below is a detailed description of a ride:
 ___________

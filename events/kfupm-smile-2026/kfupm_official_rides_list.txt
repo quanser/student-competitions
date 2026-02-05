@@ -1,8 +1,8 @@
 # These locations will stay the same throughout the competition
-# Please read the HANDBOOK for information on how to complete a ride
+# Please read the Physical Stage Competition Guide for information on how to complete a ride
 
 # Locations (x, y, theta) [m, m, degrees]
-# The conventions for x, y, theta are based on QLabs and are the same as Stage 1
+# The conventions for x, y, theta are based on QLabs and are the same as the Virtual Stage
 # Headings provided are based on right handed traffic
 
 0 = [ 0.0 , 0.0, -90]
@@ -32,7 +32,7 @@
 24 = [ -0.826 , 3.645, 0]
 25 = [ -0.857 , 1.716, -90]
 
-# This is the official ride list for the competition
+# This is the official ride list for the KFUPM SMiLE competition
 
 A: 1, 8
 B: 2, 6
