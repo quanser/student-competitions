@@ -13,6 +13,18 @@ This document contains the following:
 - [❓ FAQ ❓](#-faq-)
 - [🗄️ Competition Resources 🗄️](#️-competition-resources-️)
 
+______________________
+
+This competition has concluded with the following results:
+
+| Placement         | Team Name         | University        | Country |
+| :------           | :-----:           | :-------:         | :---:   |
+| 1st               | Autominds         | KFUPM             | Saudi Arabia |
+| 2nd               | Marvel26          | Hashemite University | Jordan    |
+| 3rd               | CTRLA             | Hashemite University  | Jordan    |
+
+A big thanks to ATLAB, KFUPM and Quanser for helping support this competition!
+
 ## 🪧 Competition Objective 🪧
 
 List of Objectives and Rules Resources:
@@ -38,6 +50,7 @@ During the **physical stage** of this competition, the objective will be to impl
 - From the 2025 ACC Competition the Czech Technical University in Prague submitted the following video and were invited to the Physical Stage of the competition. This video should be treated as a good example of what to show in your Virtual Stage Submission: [CVUT Virtual Stage Submission](https://www.youtube.com/watch?v=JXOI1RtLTbs)
 - A scenario containing traffic controls has been uploaded [`Setup_Real_Scenario.m`](../common/Virtual_MATLAB_Resources/self_driving_stack_resources/Setup_Real_Scenario.m)
 - The official ride list is provided at [Official Ride List](https://quanser.github.io/student-competitions/events/kfupm-smile-2026/kfupm_official_rides_list.txt) as well as a [Ride List Visualization](https://quanser.github.io/student-competitions/events/kfupm-smile-2026/KFUPM_RIDE_VISUALIZATION.pdf)
+
 
 ## 🕙 Competition Structure and Timeline 🕙
 

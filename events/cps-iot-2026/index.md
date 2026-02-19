@@ -37,6 +37,7 @@ During the **physical stage** of this competition, the objective will be to impl
 - The [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab) are now released!
 - IMPORTANT: To prepare for the competition properly, a [Competition Day Guide](../common/Rules_and_Objectives/Physical_Stage_Competition_Day_Guide.md) has been provided containing everything you will need on the day of the in-person event
 - From the 2025 ACC Competition the Czech Technical University in Prague submitted the following video and were invited to the Physical Stage of the competition. This video should be treated as a good example of what to show in your Virtual Stage Submission: [CVUT Virtual Stage Submission](https://www.youtube.com/watch?v=JXOI1RtLTbs)
+- The Virtual Stage Video Submission is now March 31st!
 
 ## 🕙 Competition Structure and Timeline 🕙
 
@@ -49,8 +50,8 @@ Please see the below table for a timeline containing important dates. Keep in mi
 | Nov 18   | Registration Opens| Registration Link: [CPS IoT Competition Registration](https://forms.office.com/pages/responsepage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BURDdNS1BIOEZNVTI3RFNHSkRMODk2OUo0MC4u&route=shorturl) |
 | Dec 1 | Release of [MATLAB Technical Resources](https://github.com/quanser/student-competition-resources-matlab)  | The MATLAB/Simulink technical resources will be released and students can begin development. |
 | Dec 1 - May 9 | Virtual Stage | Teams will develop their self-driving car algorithms in QLabs and submit a video showcasing their algorithm and its readiness. |
-| Late Jan (date TBD) | Webinar for Competition Resources | A webinar will be held to go over what resources are available to students and provide a chance for students to ask questions to the competition organizers. |
-| May 9 | Finalists Selection and Development | Finalists will be selected based on video submissions to come to CPS IoT in France in person. Teams will continue to develop in the virtual environment.|
+| March 31 | **Virtual Stage Submission DEADLINE** | Teams must submit a video of their virtual performance according to [Virtual Submission Requirements](../common/Rules_and_Objectives/Virtual_Stage_Competition_Guide.md#virtual-stage-submission-requirements) and the [Software Requirements](#-software-requirements-). |
+| April  3 | Finalists Selection and Development | Finalists will be selected based on video submissions to come to CPS IoT in France in person. Teams will continue to develop in the virtual environment until the in-person event.|
 | May 12-13 | Conference Workshop | Finalists will come to CPS IoT France and implement their algorithms on a physical QCar 2 with the help of a Quanser Representative. |
 | May 14 | Competition Days | Finalists will compete using physical QCar 2s according to the Physical Stage Competition Guide.|
 
@@ -70,7 +71,7 @@ For any competition related inquiries, please email: studentcompetition@quanser.
 
 ## 🗄️ Competition Resources 🗄️
 
-**Competition Documentation:**:
+**Competition Documentation:**
 
 - [CPS IoT Competition Registration](https://forms.office.com/pages/responsepage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BURDdNS1BIOEZNVTI3RFNHSkRMODk2OUo0MC4u&route=shorturl)
 - [Request a MathWorks Student Competition license](https://www.mathworks.com/academia/academic-support/student-competition-individual-team.html) (IMPORTANT)
