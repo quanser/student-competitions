@@ -4,11 +4,12 @@ This document covers how to setup a 4-way intersection on the Quanser Large Road
 
 ## Topics <!-- omit in toc -->
 
-This document contians the following:
+This document contains the following:
 
 - [Existing Documentation](#existing-documentation)
 - [How to Set the Static IP for a Quanser Traffic Light](#how-to-set-the-static-ip-for-a-quanser-traffic-light)
 - [Setting Up a 4-Way Intersection](#setting-up-a-4-way-intersection)
+- [Testing an Individual Traffic Light](#testing-an-individual-traffic-light)
 
 ## Existing Documentation
 
@@ -64,10 +65,19 @@ To set up a 4-way intersection, make sure you have set the static IP Addresses. 
 
 1. Ensure you have [downloaded the Quanser Academic Resources](https://github.com/quanser/Quanser_Academic_Resources?tab=readme-ov-file#downloading-resources) and [setup your computer for using Python](https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/docs/pc_setup.md#if-you-are-using-python)
 
-2. Download the [4 Way Intersection Python Script](./4WayIntersection.py) manually
+2. Download the [4 Way Intersection Python Script](./4wayIntersectionAsync.py) manually
 
     ![manual download of file in github](../../Pictures/github_manually_downloading_file.png)
 
 3. Ensure the Traffic Lights are on
 
 4. Run the Python script
+
+## Testing an Individual Traffic Light
+
+To test a single traffic light do the following:
+
+1. Ensure you have downloaded the [Single Traffic Light Tester](./SingleLightTrafficLightTester.py) code
+2. Ensure the traffic light is on
+3. Change the IP Address to that of the traffic light in the script
+4. Run the Python Script
