@@ -4,6 +4,15 @@ import urllib.request
 from urllib.error import HTTPError, URLError
 from socket import timeout
 
+###################################################################
+################         USER INPUT        ########################
+###################################################################
+
+trafficLightIPs = str("192.168.2.20")
+
+###################################################################
+###################################################################
+
 #Send the formatted request
 def sendreq(url):
     #Format the HTTP get request with a timeout of 1s to account for async tasks that will not return
@@ -22,9 +31,6 @@ def sendreq(url):
             response = "Async call complete"
 
     return response
-
-#Define the traffic lights in use
-trafficLightIPs = str("192.168.2.20")
 
 #Define the length of red, yellow, green
 redTime = str(3)

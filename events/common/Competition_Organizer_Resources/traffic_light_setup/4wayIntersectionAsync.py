@@ -7,6 +7,15 @@ import urllib.request, sys
 from urllib.error import HTTPError, URLError
 from socket import timeout
 
+###################################################################
+################         USER INPUT        ########################
+###################################################################
+
+sequence_duration = 22
+
+###################################################################
+###################################################################
+
 #Send the formatted request
 def sendreq(url):
     #Format the HTTP get request with a timeout of 1s to account for async tasks that will not return
@@ -30,17 +39,23 @@ def sendreq(url):
 trafficLightIPs = ["192.168.2.20", "192.168.2.21", "192.168.2.22", "192.168.2.23"]
 
 #Define the length of red, yellow, green
-redTime = str(11)
-yellowTime = str(3)
-greenTime = str(8)
+red = round(sequence_duration/2)
+yellow = 3
+green = sequence_duration - red - yellow
+
+#Convert to strings for the URL request
+redTime = str(red)
+yellowTime = str(yellow)
+greenTime = str(green)
+
 
 #Turn the adjacent traffic lights on at the same time
-print(sendreq("http://" + trafficLightIPs[1] + ":5000/timed/" + redTime + "/" + yellowTime + "/" + greenTime))
-print(sendreq("http://" + trafficLightIPs[3] + ":5000/timed/" + redTime + "/" + yellowTime + "/" + greenTime))
+print(sendreq("http://" + trafficLightIPs[0] + ":5000/timed/" + redTime + "/" + yellowTime + "/" + greenTime))
+#print(sendreq("http://" + trafficLightIPs[2] + ":5000/timed/" + redTime + "/" + yellowTime + "/" + greenTime))
 
 #Wait for first 2 traffic lights to finish their red light duration before changing the next 2 traffic lights on
-time.wait(11)
+time.sleep(red)
 
 #Turn the other adjacent traffic lights on at the same time
-print(sendreq("http://" + trafficLightIPs[2] + ":5000/timed/" + redTime + "/" + yellowTime + "/" + greenTime))
-print(sendreq("http://" + trafficLightIPs[4] + ":5000/timed/" + redTime + "/" + yellowTime + "/" + greenTime))
+print(sendreq("http://" + trafficLightIPs[1] + ":5000/timed/" + redTime + "/" + yellowTime + "/" + greenTime))
+#print(sendreq("http://" + trafficLightIPs[3] + ":5000/timed/" + redTime + "/" + yellowTime + "/" + greenTime))

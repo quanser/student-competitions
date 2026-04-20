@@ -97,24 +97,25 @@
 <p>To set up a 4-way intersection, make sure you have set the static IP Addresses. Then do the following:</p>
 <ol>
 <li>
-<p>Ensure you have <a href="https://github.com/quanser/Quanser_Academic_Resources?tab=readme-ov-file#downloading-resources">downloaded the Quanser Academic Resources</a> and <a href="https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/docs/pc_setup.html#if-you-are-using-python">setup your computer for using Python</a></p>
-</li>
-<li>
 <p>Download the <a href="./4wayIntersectionAsync.py">4 Way Intersection Python Script</a> manually</p>
 <p><img alt="manual download of file in github" src="../../Pictures/github_manually_downloading_file.png"/></p>
 </li>
 <li>
-<p>Ensure the Traffic Lights are on</p>
+<p>Ensure the Traffic Lights are on and you can ping each one</p>
+</li>
+<li>
+<p>Use the ping command in a command prompt (e.g. <code>ping 192.168.2.20</code>) </p>
 </li>
 <li>
 <p>Run the Python script</p>
 </li>
 </ol>
+<p>If you ever need to reset the traffic lights, ensure you power cycle the traffic lights before running the Python script again.</p>
 <h2 id="testing-an-individual-traffic-light">Testing an Individual Traffic Light</h2>
 <p>To test a single traffic light do the following:</p>
 <ol>
 <li>Ensure you have downloaded the <a href="./SingleLightTrafficLightTester.py">Single Traffic Light Tester</a> code</li>
-<li>Ensure the traffic light is on</li>
+<li>Ensure the traffic light is on and you can ping it</li>
 <li>Change the IP Address to that of the traffic light in the script</li>
 <li>Run the Python Script</li>
 </ol>
