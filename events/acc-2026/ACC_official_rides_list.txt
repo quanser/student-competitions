@@ -32,10 +32,29 @@
 24 = [ -0.826 , 3.645, 0]
 25 = [ -0.857 , 1.716, -90]
 
-# This is the official ride list for the CPS IoT competition
+# This is the official ride list for the ACC 2026 competition
 
 A: 1, 8
-B: 2, 6
-C: 1, 11
-D: 15, 22
-E: 15, 7, 13
+B: 6, 18
+C: 2, 6
+D: 13, 6
+E: 1, 11
+F: 14, 11
+G: 8, 18
+H: 4, 0
+I: 14, 22
+J: 14, 24
+K: 24, 22
+L: 20, 7, 1
+M: 4, 1, 8
+N: 13, 3
+O: 24, 20
+P: 9, 15
+Q: 7, 23, 11
+R: 18, 5
+S: 15, 22
+T: 10, 0, 23
+U: 15, 7, 13
+V: 23, 14, 2
+W: 25, 8
+X: 24, 0, 25
